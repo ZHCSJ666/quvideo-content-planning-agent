@@ -1,0 +1,45 @@
+{
+  "method": "Streamlit AppTest; no screenshot/browser visual validation",
+  "results": [
+    {
+      "case": "normal",
+      "rendered_without_api": true,
+      "metrics": [
+        "4 / 4",
+        "68 / 100",
+        "10.5 h",
+        "18 / 40"
+      ]
+    },
+    {
+      "case": "script-failure",
+      "rendered_without_api": true,
+      "metrics": [
+        "4 / 4",
+        "91 / 100",
+        "13.7 h",
+        "36 / 41"
+      ]
+    },
+    {
+      "case": "budget-tight",
+      "rendered_without_api": true,
+      "metrics": [
+        "1 / 4",
+        "18 / 40",
+        "2.2 h",
+        "17 / 40"
+      ]
+    },
+    {
+      "case": "missing-budget",
+      "rendered_without_api": true,
+      "metrics": [
+        "0 / 4",
+        "0 / 待补",
+        "0.0 h",
+        "0 / 40"
+      ]
+    }
+  ]
+}

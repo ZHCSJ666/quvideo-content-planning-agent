@@ -1,0 +1,28 @@
+{
+  "DE": {
+    "language": "de-DE",
+    "audience": "城市通勤人群（演示设定）",
+    "platform": "竖屏社交短视频（演示渠道）",
+    "format": "9:16 / 20 seconds",
+    "angles": [
+      "随身通勤的容量与使用场景",
+      "办公桌上的重复使用习惯"
+    ],
+    "style": "清晰自然的德语；镜头展示具体使用场景；只使用产品档案支持的事实",
+    "cta": "了解产品细节，不编造折扣",
+    "source": "synthetic market brief; not national audience research"
+  },
+  "US": {
+    "language": "en-US",
+    "audience": "周末户外与短途出行人群（演示设定）",
+    "platform": "竖屏社交短视频（演示渠道）",
+    "format": "9:16 / 20 seconds",
+    "angles": [
+      "出发前的轻装准备",
+      "短途休息时的使用场景"
+    ],
+    "style": "自然美式英语；以具体出行场景开场；避免虚构保温时长与防漏效果",
+    "cta": "Explore product details; no invented offers",
+    "source": "synthetic market brief; not national audience research"
+  }
+}

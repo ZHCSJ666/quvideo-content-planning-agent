@@ -1,0 +1,308 @@
+{
+  "task_id": "budget_replan",
+  "brief": {
+    "theme": "便携杯多语言推广：希望先评估标准档位四条方案的报价；40单位是硬上限，若超限请寻找保留完整交付的替代方案",
+    "product_id": "travel-cup",
+    "markets": {
+      "DE": 2,
+      "US": 2
+    },
+    "budget_units": 40,
+    "deadline_hours": 48.0,
+    "max_calls": 40
+  },
+  "mode": "offline",
+  "status": "completed",
+  "plan": [
+    {
+      "id": "DE-1",
+      "market": "DE",
+      "angle": "随身通勤的容量与使用场景 / 1",
+      "audience": "城市通勤人群（演示设定）",
+      "strategy": "清晰自然的德语；镜头展示具体使用场景；只使用产品档案支持的事实；以合成静态素材进行构图与字幕设计",
+      "asset_ids": [
+        "cup-hero",
+        "commute"
+      ],
+      "tier": "economy"
+    },
+    {
+      "id": "DE-2",
+      "market": "DE",
+      "angle": "办公桌上的重复使用习惯 / 2",
+      "audience": "城市通勤人群（演示设定）",
+      "strategy": "清晰自然的德语；镜头展示具体使用场景；只使用产品档案支持的事实；以合成静态素材进行构图与字幕设计",
+      "asset_ids": [
+        "cup-hero",
+        "desk"
+      ],
+      "tier": "economy"
+    },
+    {
+      "id": "US-1",
+      "market": "US",
+      "angle": "出发前的轻装准备 / 1",
+      "audience": "周末户外与短途出行人群（演示设定）",
+      "strategy": "自然美式英语；以具体出行场景开场；避免虚构保温时长与防漏效果；以合成静态素材进行构图与字幕设计",
+      "asset_ids": [
+        "cup-hero",
+        "trail"
+      ],
+      "tier": "economy"
+    },
+    {
+      "id": "US-2",
+      "market": "US",
+      "angle": "短途休息时的使用场景 / 2",
+      "audience": "周末户外与短途出行人群（演示设定）",
+      "strategy": "自然美式英语；以具体出行场景开场；避免虚构保温时长与防漏效果；以合成静态素材进行构图与字幕设计",
+      "asset_ids": [
+        "cup-hero",
+        "road"
+      ],
+      "tier": "economy"
+    }
+  ],
+  "artifacts": {
+    "DE-1": {
+      "task_hash": "f83ca36f4ecb75e3c507d72ffabf4a33eef263c13a1329db6230ecc52c131a49",
+      "status": "approved",
+      "script": {
+        "task_id": "DE-1",
+        "language": "de-DE",
+        "title": "Dein täglicher Begleiter · 1",
+        "hook": "Dein Tag beginnt unterwegs.",
+        "cta": "Entdecke ROAM 350 und die Produktdetails.",
+        "claim_ids": [
+          "capacity",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "离线示例：依照城市通勤人群（演示设定）和创意随身通勤的容量与使用场景 / 1安排字幕与素材；不能作为真实模型创意质量证据。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Dein Tag beginnt unterwegs.",
+            "on_screen": "ROAM 350"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "commute",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "350 ml für deinen nächsten Moment.",
+            "on_screen": "350 ml"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Ein Becher aus Edelstahl, immer wieder verwendbar.",
+            "on_screen": "Edelstahl"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "commute",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Entdecke ROAM 350 und die Produktdetails.",
+            "on_screen": "Mehr erfahren"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 4,
+        "market_fit_score": 4,
+        "evidence_score": 4,
+        "issues": [],
+        "rationale": "离线测试桩评分，仅验证流程；不证明真实语言与创意质量"
+      }
+    },
+    "DE-2": {
+      "task_hash": "d3500b19529e89ed8fc2fae7dbab9254be632833c29622ca5e4abc7ef0829c40",
+      "status": "approved",
+      "script": {
+        "task_id": "DE-2",
+        "language": "de-DE",
+        "title": "Dein täglicher Begleiter · 2",
+        "hook": "Dein Tag beginnt unterwegs.",
+        "cta": "Entdecke ROAM 350 und die Produktdetails.",
+        "claim_ids": [
+          "capacity",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "离线示例：依照城市通勤人群（演示设定）和创意办公桌上的重复使用习惯 / 2安排字幕与素材；不能作为真实模型创意质量证据。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Dein Tag beginnt unterwegs.",
+            "on_screen": "ROAM 350"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "desk",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "350 ml für deinen nächsten Moment.",
+            "on_screen": "350 ml"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Ein Becher aus Edelstahl, immer wieder verwendbar.",
+            "on_screen": "Edelstahl"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "desk",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Entdecke ROAM 350 und die Produktdetails.",
+            "on_screen": "Mehr erfahren"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 4,
+        "market_fit_score": 4,
+        "evidence_score": 4,
+        "issues": [],
+        "rationale": "离线测试桩评分，仅验证流程；不证明真实语言与创意质量"
+      }
+    },
+    "US-1": {
+      "task_hash": "c0fc1bcfb3b12f409a5abbbe452a7c08441ecdf68a6ef497f41b8e83574ac017",
+      "status": "approved",
+      "script": {
+        "task_id": "US-1",
+        "language": "en-US",
+        "title": "Ready for your next stop · 1",
+        "hook": "Pack for your next little escape.",
+        "cta": "Explore ROAM 350 and its product details.",
+        "claim_ids": [
+          "capacity",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "离线示例：依照周末户外与短途出行人群（演示设定）和创意出发前的轻装准备 / 1安排字幕与素材；不能作为真实模型创意质量证据。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Pack for your next little escape.",
+            "on_screen": "ROAM 350"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "trail",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Bring 350 ml along for the ride.",
+            "on_screen": "350 ml"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "A reusable cup with a stainless steel body.",
+            "on_screen": "Stainless steel"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "trail",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Explore ROAM 350 and its product details.",
+            "on_screen": "Explore details"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 4,
+        "market_fit_score": 4,
+        "evidence_score": 4,
+        "issues": [],
+        "rationale": "离线测试桩评分，仅验证流程；不证明真实语言与创意质量"
+      }
+    },
+    "US-2": {
+      "task_hash": "799f893f0faebe4d14143a5cb4c3d064ff1d8e407ae6fc314bf3d7394ed98bb5",
+      "status": "approved",
+      "script": {
+        "task_id": "US-2",
+        "language": "en-US",
+        "title": "Ready for your next stop · 2",
+        "hook": "Pack for your next little escape.",
+        "cta": "Explore ROAM 350 and its product details.",
+        "claim_ids": [
+          "capacity",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "离线示例：依照周末户外与短途出行人群（演示设定）和创意短途休息时的使用场景 / 2安排字幕与素材；不能作为真实模型创意质量证据。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Pack for your next little escape.",
+            "on_screen": "ROAM 350"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "road",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Bring 350 ml along for the ride.",
+            "on_screen": "350 ml"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-hero",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "A reusable cup with a stainless steel body.",
+            "on_screen": "Stainless steel"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "road",
+            "visual": "合成静态素材轻微推近，叠加对应字幕",
+            "voiceover": "Explore ROAM 350 and its product details.",
+            "on_screen": "Explore details"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 4,
+        "market_fit_score": 4,
+        "evidence_score": 4,
+        "issues": [],
+        "rationale": "离线测试桩评分，仅验证流程；不证明真实语言与创意质量"
+      }
+    }
+  },
+  "spent": 35,
+  "elapsed_minutes": 265,
+  "plan_version": 2,
+  "disclaimer": "Synthetic product/market/media; plan delivery only, no rendered video; model review is not human market validation."
+}

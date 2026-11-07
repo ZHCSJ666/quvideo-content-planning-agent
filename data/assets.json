@@ -1,0 +1,118 @@
+[
+  {
+    "id": "cup-hero",
+    "path": "data/assets/cup-hero.svg",
+    "sha256": "3b9bf0aaadd2d2e65541c07c21c1878cac526e67fac2de403f493d469ecbcabe",
+    "markets": [
+      "DE",
+      "US"
+    ],
+    "tags": [
+      "product",
+      "capacity",
+      "material"
+    ],
+    "aspect_ratio": "9:16",
+    "language": "neutral",
+    "type": "synthetic_vector_still",
+    "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+    "source": "original programmatic SVG for this project",
+    "rights": "self-created demo asset; no claim to real product photography"
+  },
+  {
+    "id": "cup-detail",
+    "path": "data/assets/cup-detail.svg",
+    "sha256": "d19b13c321396ce1003b6ca3c574173edf4c03c12dd020c015125e7d5f7b24c5",
+    "markets": [
+      "DE",
+      "US"
+    ],
+    "tags": [
+      "lid",
+      "detail",
+      "product"
+    ],
+    "aspect_ratio": "9:16",
+    "language": "neutral",
+    "type": "synthetic_vector_still",
+    "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+    "source": "original programmatic SVG for this project",
+    "rights": "self-created demo asset; no claim to real product photography"
+  },
+  {
+    "id": "commute",
+    "path": "data/assets/commute.svg",
+    "sha256": "fd625be89623f96bf03bf113d4d17307499ab9487571b77d6c995cf9e7ce6ca9",
+    "markets": [
+      "DE"
+    ],
+    "tags": [
+      "commute",
+      "city",
+      "capacity"
+    ],
+    "aspect_ratio": "9:16",
+    "language": "neutral",
+    "type": "synthetic_vector_still",
+    "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+    "source": "original programmatic SVG for this project",
+    "rights": "self-created demo asset; no claim to real product photography"
+  },
+  {
+    "id": "desk",
+    "path": "data/assets/desk.svg",
+    "sha256": "d326f7e07f58bdb29ffba2f7a44cf63499aa0918d9a155048a2c2a126748337e",
+    "markets": [
+      "DE"
+    ],
+    "tags": [
+      "desk",
+      "reuse",
+      "office"
+    ],
+    "aspect_ratio": "9:16",
+    "language": "neutral",
+    "type": "synthetic_vector_still",
+    "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+    "source": "original programmatic SVG for this project",
+    "rights": "self-created demo asset; no claim to real product photography"
+  },
+  {
+    "id": "trail",
+    "path": "data/assets/trail.svg",
+    "sha256": "900fbd71da1c1437c12ad46e533d89c2f497379888cbc2f6521c38c8770e013c",
+    "markets": [
+      "US"
+    ],
+    "tags": [
+      "outdoor",
+      "trail",
+      "reuse"
+    ],
+    "aspect_ratio": "9:16",
+    "language": "neutral",
+    "type": "synthetic_vector_still",
+    "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+    "source": "original programmatic SVG for this project",
+    "rights": "self-created demo asset; no claim to real product photography"
+  },
+  {
+    "id": "road",
+    "path": "data/assets/road.svg",
+    "sha256": "2b4640f92340ad4d7610413fc86df81b8b8b8269dcb718a1d7ae74eeea1f0070",
+    "markets": [
+      "US"
+    ],
+    "tags": [
+      "travel",
+      "outdoor",
+      "capacity"
+    ],
+    "aspect_ratio": "9:16",
+    "language": "neutral",
+    "type": "synthetic_vector_still",
+    "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+    "source": "original programmatic SVG for this project",
+    "rights": "self-created demo asset; no claim to real product photography"
+  }
+]

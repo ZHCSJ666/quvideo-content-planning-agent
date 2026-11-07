@@ -1,0 +1,8 @@
+{
+  "theme": "ROAM 350 便携杯：德国与美国市场的多语言短视频内容活动",
+  "product_id": "travel-cup",
+  "markets": {"DE": 2, "US": 2},
+  "budget_units": 100,
+  "deadline_hours": 48,
+  "max_calls": 40
+}

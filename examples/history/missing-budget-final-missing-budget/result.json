@@ -1,0 +1,43 @@
+{
+  "artifacts": {},
+  "attempts": {},
+  "brief": {
+    "budget_units": null,
+    "deadline_hours": 48.0,
+    "markets": {
+      "DE": 2,
+      "US": 2
+    },
+    "max_calls": 40,
+    "product_id": "travel-cup",
+    "theme": "便携杯多语言推广：待补预算"
+  },
+  "calls": 0,
+  "catalog": [],
+  "context": null,
+  "decision": null,
+  "elapsed_minutes": 0,
+  "last_result": null,
+  "mode": "live",
+  "model_calls": 0,
+  "model_config": {
+    "max_tokens": 6000,
+    "model": "vllm/Qwen/Qwen3.5-27B",
+    "sdk_retries": 0,
+    "temperature": 0.2,
+    "vllm_disable_thinking": true
+  },
+  "model_usage": {},
+  "plan": [],
+  "plan_version": 0,
+  "quote": null,
+  "reason": "Missing required constraints: budget_units",
+  "resume_count": 0,
+  "saved": null,
+  "scenario": "normal",
+  "searches": [],
+  "spent": 0,
+  "status": "waiting_input",
+  "task_id": "final-missing-budget",
+  "trace": []
+}

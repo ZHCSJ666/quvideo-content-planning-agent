@@ -1,0 +1,9 @@
+{
+  "reviewer": "Codex implementation audit, not human native-language review",
+  "passed": false,
+  "issues": [
+    "Unsupported lightweight/durable/secure/sustainability wording was missed by model review",
+    "Rationale contains unsupported generalizations about German consumers"
+  ],
+  "action": "Tighten product evidence rules and prompts; rerun final acceptance. Preserve this historical trace unchanged."
+}

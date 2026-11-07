@@ -1,0 +1,56 @@
+{
+  "currency": "simulation_units",
+  "clock": "serial simulated business minutes; not measured wall time",
+  "tiers": {
+    "premium": {
+      "cost": 28,
+      "minutes": 240,
+      "description": "更丰富的创意表达；仍须通过相同质量门槛"
+    },
+    "standard": {
+      "cost": 12,
+      "minutes": 120,
+      "description": "标准脚本与分镜方案"
+    },
+    "economy": {
+      "cost": 7,
+      "minutes": 60,
+      "description": "复用已选素材，简化表现形式；不削减交付字段"
+    }
+  },
+  "tools": {
+    "load_context": [
+      0,
+      0
+    ],
+    "search_assets": [
+      1,
+      2
+    ],
+    "revise_plan": [
+      0,
+      0
+    ],
+    "estimate_cost": [
+      0,
+      0
+    ],
+    "review_content": [
+      1,
+      5
+    ],
+    "save_campaign": [
+      1,
+      1
+    ],
+    "stop": [
+      0,
+      0
+    ]
+  },
+  "failure_cost": 2,
+  "failure_minutes": 10,
+  "quality_threshold": 4,
+  "max_generation_attempts_per_task": 3,
+  "note": "模拟费用覆盖本项目的方案制作流程，不含实际视频制作报价或真实模型账单。相同工具的不同档位是模拟业务服务，不代表模型能力承诺。"
+}

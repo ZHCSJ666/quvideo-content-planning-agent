@@ -1,0 +1,49 @@
+{
+  "artifacts": {},
+  "attempts": {},
+  "brief": {
+    "budget_units": 100,
+    "deadline_hours": null,
+    "markets": {
+      "DE": 2,
+      "US": 2
+    },
+    "max_calls": 40,
+    "product_id": "travel-cup",
+    "theme": "便携杯多语言推广：待补截止时间"
+  },
+  "calls": 0,
+  "catalog": [],
+  "context": null,
+  "decision": null,
+  "elapsed_minutes": 0,
+  "feedback": {},
+  "last_result": null,
+  "mode": "offline",
+  "model_calls": 0,
+  "model_config": {
+    "provider": "offline_mock"
+  },
+  "model_usage": {},
+  "plan": [],
+  "plan_version": 0,
+  "quote": null,
+  "reason": "Missing required constraints: deadline_hours",
+  "resume_count": 0,
+  "saved": null,
+  "scenario": "normal",
+  "searches": [],
+  "spent": 0,
+  "status": "waiting_input",
+  "task_id": "missing_deadline",
+  "trace": [
+    {
+      "kind": "clarification",
+      "missing": [
+        "deadline_hours"
+      ],
+      "reason": "Missing required constraints: deadline_hours",
+      "status": "waiting_input"
+    }
+  ]
+}

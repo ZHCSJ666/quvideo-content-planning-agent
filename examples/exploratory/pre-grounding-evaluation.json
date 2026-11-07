@@ -1,0 +1,19 @@
+{
+  "mode": "live",
+  "results": [
+    {
+      "case": "normal",
+      "task_id": "live-verified-normal",
+      "status": "completed",
+      "spent": 55,
+      "calls": 14,
+      "model_calls": 22,
+      "model_usage": {
+        "input_tokens": 70660,
+        "output_tokens": 4007,
+        "total_tokens": 74667
+      },
+      "passed": true
+    }
+  ]
+}

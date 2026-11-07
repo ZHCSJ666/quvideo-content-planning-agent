@@ -1,0 +1,15 @@
+{
+  "kind": "isolated structured-generation probe, not an end-to-end agent run",
+  "model": "vllm/Qwen/Qwen3.8-27B",
+  "vllm_disable_thinking": false,
+  "elapsed_seconds_observed": 20.2,
+  "deterministic_script_errors": [],
+  "voiceover_observed": [
+    "Hier ist dein 350 ml Begleiter.",
+    "Mit Edelstahl-Körper.",
+    "Der Schraubdeckel passt perfekt.",
+    "Wiederverwendbar für jeden Tag. Entdecke die Details."
+  ],
+  "context": "DE-1 task from final-script-failure with the prior rejection passed explicitly after the feedback-retention fix",
+  "interpretation": "Interface and this output validated; no general performance claim."
+}

@@ -1,0 +1,82 @@
+{
+  "mode": "live",
+  "results": [
+    {
+      "case": "normal",
+      "task_id": "final-normal",
+      "status": "completed",
+      "spent": 68,
+      "calls": 18,
+      "model_calls": 27,
+      "model_usage": {
+        "input_tokens": 96992,
+        "output_tokens": 5645,
+        "total_tokens": 102637
+      },
+      "passed": true,
+      "resume_count": 0,
+      "tool_actors": [
+        "live:vllm/Qwen/Qwen3.5-27B"
+      ]
+    },
+    {
+      "case": "script-failure",
+      "task_id": "feedback-fixed-script-failure",
+      "status": "completed",
+      "spent": 91,
+      "calls": 36,
+      "model_calls": 46,
+      "model_usage": {
+        "input_tokens": 205519,
+        "output_tokens": 26778,
+        "total_tokens": 232297
+      },
+      "passed": true,
+      "resume_count": 1,
+      "tool_actors": [
+        "live:vllm/Qwen/Qwen3.5-27B",
+        "live:vllm/Qwen/Qwen3.8-27B"
+      ],
+      "injected_failure_observed": true,
+      "recovery_mode": "explicit_operator_resume",
+      "preserved_approved_tasks": [
+        "DE-1"
+      ]
+    },
+    {
+      "case": "budget-tight",
+      "task_id": "final-budget-tight",
+      "status": "incomplete",
+      "spent": 18,
+      "calls": 17,
+      "model_calls": 21,
+      "model_usage": {
+        "input_tokens": 82772,
+        "output_tokens": 4792,
+        "total_tokens": 87564
+      },
+      "passed": true,
+      "resume_count": 1,
+      "tool_actors": [
+        "live:vllm/Qwen/Qwen3.5-27B"
+      ],
+      "infeasible_quote_observed": true,
+      "acceptance_rule": "Observe infeasible quote and replan; complete within budget OR explicitly stop when the cheapest remaining completion cannot fit. Never mark partial content complete.",
+      "minimum_budget_gap_at_stop": 3
+    },
+    {
+      "case": "missing-budget",
+      "status": "waiting_input",
+      "model_calls": 0,
+      "passed": true,
+      "task_id": "validated-missing-budget"
+    },
+    {
+      "case": "duplicate",
+      "passed": true,
+      "additional_calls": 0,
+      "additional_cost": 0,
+      "task_id": "final-normal"
+    }
+  ]
+}

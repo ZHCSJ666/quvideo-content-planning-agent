@@ -1,0 +1,123 @@
+{
+  "mode": "offline_mock",
+  "claim": "workflow validation only; not model decision evidence",
+  "results": [
+    {
+      "case": "normal",
+      "expected": "completed",
+      "actual": "completed",
+      "spent": 55,
+      "calls": 16,
+      "passed": true
+    },
+    {
+      "case": "budget_replan",
+      "expected": "completed",
+      "actual": "completed",
+      "spent": 35,
+      "calls": 16,
+      "passed": true
+    },
+    {
+      "case": "budget_impossible",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "spent": 2,
+      "calls": 6,
+      "passed": true
+    },
+    {
+      "case": "deadline_replan",
+      "expected": "completed",
+      "actual": "completed",
+      "spent": 35,
+      "calls": 16,
+      "passed": true
+    },
+    {
+      "case": "script_failure",
+      "expected": "completed",
+      "actual": "completed",
+      "spent": 57,
+      "calls": 17,
+      "passed": true
+    },
+    {
+      "case": "persistent_failure",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "spent": 21,
+      "calls": 13,
+      "passed": true
+    },
+    {
+      "case": "asset_missing",
+      "expected": "completed",
+      "actual": "completed",
+      "spent": 55,
+      "calls": 19,
+      "passed": true
+    },
+    {
+      "case": "quality_failure",
+      "expected": "completed",
+      "actual": "completed",
+      "spent": 68,
+      "calls": 18,
+      "passed": true
+    },
+    {
+      "case": "save_failure",
+      "expected": "completed",
+      "actual": "completed",
+      "spent": 55,
+      "calls": 17,
+      "passed": true
+    },
+    {
+      "case": "step_limit",
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "spent": 2,
+      "calls": 4,
+      "passed": true
+    },
+    {
+      "case": "missing_budget",
+      "expected": "waiting_input",
+      "actual": "waiting_input",
+      "spent": 0,
+      "calls": 0,
+      "passed": true
+    },
+    {
+      "case": "missing_deadline",
+      "expected": "waiting_input",
+      "actual": "waiting_input",
+      "spent": 0,
+      "calls": 0,
+      "passed": true
+    },
+    {
+      "case": "duplicate",
+      "passed": true,
+      "additional_cost": 0,
+      "additional_calls": 0
+    },
+    {
+      "case": "missing_budget_resumed",
+      "actual": "completed",
+      "passed": true
+    },
+    {
+      "case": "missing_deadline_resumed",
+      "actual": "completed",
+      "passed": true
+    },
+    {
+      "case": "persistent_failure_resumed",
+      "actual": "completed",
+      "passed": true
+    }
+  ]
+}

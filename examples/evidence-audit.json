@@ -1,0 +1,100 @@
+{
+  "scope": "Export consistency, sequential receipts, simulated ledger, completed artifact contracts. Does not prove natural language quality or marketing performance.",
+  "results": [
+    {
+      "case": "live/budget-tight",
+      "status": "incomplete",
+      "passed": true
+    },
+    {
+      "case": "live/missing-budget",
+      "status": "waiting_input",
+      "passed": true
+    },
+    {
+      "case": "live/normal",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "live/script-failure",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/asset_missing",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/budget_impossible",
+      "status": "incomplete",
+      "passed": true
+    },
+    {
+      "case": "offline/budget_replan",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/deadline_replan",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/missing_budget",
+      "status": "waiting_input",
+      "passed": true
+    },
+    {
+      "case": "offline/missing_budget_resumed",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/missing_deadline",
+      "status": "waiting_input",
+      "passed": true
+    },
+    {
+      "case": "offline/missing_deadline_resumed",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/normal",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/persistent_failure",
+      "status": "incomplete",
+      "passed": true
+    },
+    {
+      "case": "offline/persistent_failure_resumed",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/quality_failure",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/save_failure",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/script_failure",
+      "status": "completed",
+      "passed": true
+    },
+    {
+      "case": "offline/step_limit",
+      "status": "incomplete",
+      "passed": true
+    }
+  ]
+}

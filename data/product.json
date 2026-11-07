@@ -1,0 +1,43 @@
+{
+  "id": "travel-cup",
+  "name": "ROAM 350",
+  "synthetic": true,
+  "source": "项目自制演示档案；非真实商品检测数据",
+  "claims": {
+    "capacity": "350 ml capacity",
+    "material": "Stainless steel body",
+    "lid": "Screw-top lid",
+    "reuse": "Reusable cup"
+  },
+  "unknown": [
+    "thermal retention duration",
+    "leakproof certification",
+    "dishwasher compatibility",
+    "price",
+    "discount",
+    "weight",
+    "durability testing",
+    "environmental impact"
+  ],
+  "forbidden_claims": [
+    "24 hours",
+    "24 stunden",
+    "leakproof",
+    "auslaufsicher",
+    "BPA-free",
+    "dishwasher-safe",
+    "50%",
+    "guaranteed",
+    "lightweight",
+    "light-weight",
+    "durable",
+    "langlebig",
+    "robust",
+    "sustainable",
+    "nachhaltig",
+    "eco-friendly",
+    "secure",
+    "sicher",
+    "leichtgewicht"
+  ]
+}

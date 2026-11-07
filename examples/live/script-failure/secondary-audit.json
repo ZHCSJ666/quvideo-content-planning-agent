@@ -1,0 +1,21 @@
+{
+  "reviewer": "Codex secondary content inspection; not native-language human review",
+  "status": "passed_demo_grounding_check",
+  "checked_tasks": [
+    "DE-1",
+    "DE-2",
+    "US-1",
+    "US-2"
+  ],
+  "observations": [
+    "Four requested plans are saved and approved; total simulated cost is 91/100.",
+    "Customer-facing factual claims are limited to supplied capacity, material, lid and reuse facts; synthetic audience assumptions are explicitly described as such.",
+    "Visual descriptions consistently identify synthetic vector stills instead of pretending real footage exists.",
+    "US-1 corrected the previously rejected strategy/copy mismatch. DE-1 artifact is structurally identical before and after explicit resume."
+  ],
+  "limitations": [
+    "This is an AI secondary inspection, not independent human or native-speaker quality validation.",
+    "Scene-oriented expressions such as enough for the commute and light prep are creative phrasing, not measured consumer or product performance evidence.",
+    "Early failed attempts, operator interruption and model configuration change remain in the trace; the full recovery was not autonomous."
+  ]
+}

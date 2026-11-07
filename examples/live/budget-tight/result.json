@@ -1,0 +1,2067 @@
+{
+  "artifacts": {
+    "DE-1": {
+      "review": {
+        "approved": true,
+        "evidence_score": 5,
+        "issues": [],
+        "language_score": 5,
+        "market_fit_score": 5,
+        "rationale": "该方案严格遵循合成简报，针对“城市通勤人群”使用非正式德语“du”建立亲切感。内容仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用等已验证事实，未出现防漏、保温、轻量化或环保等禁止性推断。脚本时长20秒，每句配音均控制在55词以内，且视觉描述明确基于合成矢量素材（cup-hero, commute），未虚构实拍动作或场景。整体符合德语本地化要求与演示渠道规范。"
+      },
+      "script": {
+        "claim_ids": [
+          "capacity",
+          "lid",
+          "material",
+          "reuse"
+        ],
+        "cta": "Entdecke die Details.",
+        "hook": "Perfekt für deinen Weg zur Arbeit.",
+        "language": "de-DE",
+        "localization_rationale": "针对合成受众简报中的“城市通勤人群”，采用非正式“du”以建立亲切感。内容严格基于提供的合成素材（cup-hero, commute）展示350ml容量和旋盖设计，避免虚构防漏或保温等未验证属性。视觉描述使用中文以符合内部沟通习惯，强调通过镜头切换和字幕叠加来呈现通勤场景，而非依赖不存在的实拍动作。",
+        "shots": [
+          {
+            "asset_id": "cup-hero",
+            "end": 5,
+            "on_screen": "350 ml",
+            "start": 0,
+            "visual": "平面杯形与旋盖示意，抽象背景，镜头轻推近展示350ml容量标签。",
+            "voiceover": "Dein ROAM 350: 350 Milliliter Platz."
+          },
+          {
+            "asset_id": "cup-hero",
+            "end": 10,
+            "on_screen": "Edelstahl & Schraubverschluss",
+            "start": 5,
+            "visual": "平面杯形特写，强调不锈钢杯身质感与旋盖结构。",
+            "voiceover": "Edelstahl-Körper mit Schraubverschluss."
+          },
+          {
+            "asset_id": "commute",
+            "end": 15,
+            "on_screen": "Immer dabei",
+            "start": 10,
+            "visual": "平面杯形置于抽象通勤背景中，字幕叠加展示使用场景。",
+            "voiceover": "Immer dabei für deinen Weg."
+          },
+          {
+            "asset_id": "commute",
+            "end": 20,
+            "on_screen": "Wiederverwendbar",
+            "start": 15,
+            "visual": "平面杯形与抽象背景，画面定格，显示重复使用标识。",
+            "voiceover": "Wiederverwendbar. Entdecke die Details."
+          }
+        ],
+        "task_id": "DE-1",
+        "title": "ROAM 350: Dein Begleiter im Stadtverkehr"
+      },
+      "status": "approved",
+      "task_hash": "b16b1b198e24ff77c258b27fb296700917f3333258aea50acc72b390efb1b1a1"
+    }
+  },
+  "attempts": {
+    "DE-1": 1,
+    "DE-2": 1
+  },
+  "brief": {
+    "budget_units": 40,
+    "deadline_hours": 48.0,
+    "markets": {
+      "DE": 2,
+      "US": 2
+    },
+    "max_calls": 40,
+    "product_id": "travel-cup",
+    "theme": "便携杯多语言推广：希望先评估标准档位四条方案的报价；40单位是硬上限，若超限请寻找保留完整交付的替代方案"
+  },
+  "calls": 17,
+  "catalog": [
+    {
+      "aspect_ratio": "9:16",
+      "available": true,
+      "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+      "id": "cup-hero",
+      "language": "neutral",
+      "markets": [
+        "DE",
+        "US"
+      ],
+      "path": "data/assets/cup-hero.svg",
+      "rights": "self-created demo asset; no claim to real product photography",
+      "sha256": "3b9bf0aaadd2d2e65541c07c21c1878cac526e67fac2de403f493d469ecbcabe",
+      "source": "original programmatic SVG for this project",
+      "tags": [
+        "product",
+        "capacity",
+        "material"
+      ],
+      "type": "synthetic_vector_still"
+    },
+    {
+      "aspect_ratio": "9:16",
+      "available": true,
+      "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+      "id": "cup-detail",
+      "language": "neutral",
+      "markets": [
+        "DE",
+        "US"
+      ],
+      "path": "data/assets/cup-detail.svg",
+      "rights": "self-created demo asset; no claim to real product photography",
+      "sha256": "d19b13c321396ce1003b6ca3c574173edf4c03c12dd020c015125e7d5f7b24c5",
+      "source": "original programmatic SVG for this project",
+      "tags": [
+        "lid",
+        "detail",
+        "product"
+      ],
+      "type": "synthetic_vector_still"
+    },
+    {
+      "aspect_ratio": "9:16",
+      "available": true,
+      "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+      "id": "commute",
+      "language": "neutral",
+      "markets": [
+        "DE"
+      ],
+      "path": "data/assets/commute.svg",
+      "rights": "self-created demo asset; no claim to real product photography",
+      "sha256": "fd625be89623f96bf03bf113d4d17307499ab9487571b77d6c995cf9e7ce6ca9",
+      "source": "original programmatic SVG for this project",
+      "tags": [
+        "commute",
+        "city",
+        "capacity"
+      ],
+      "type": "synthetic_vector_still"
+    },
+    {
+      "aspect_ratio": "9:16",
+      "available": true,
+      "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+      "id": "desk",
+      "language": "neutral",
+      "markets": [
+        "DE"
+      ],
+      "path": "data/assets/desk.svg",
+      "rights": "self-created demo asset; no claim to real product photography",
+      "sha256": "d326f7e07f58bdb29ffba2f7a44cf63499aa0918d9a155048a2c2a126748337e",
+      "source": "original programmatic SVG for this project",
+      "tags": [
+        "desk",
+        "reuse",
+        "office"
+      ],
+      "type": "synthetic_vector_still"
+    },
+    {
+      "aspect_ratio": "9:16",
+      "available": true,
+      "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+      "id": "trail",
+      "language": "neutral",
+      "markets": [
+        "US"
+      ],
+      "path": "data/assets/trail.svg",
+      "rights": "self-created demo asset; no claim to real product photography",
+      "sha256": "900fbd71da1c1437c12ad46e533d89c2f497379888cbc2f6521c38c8770e013c",
+      "source": "original programmatic SVG for this project",
+      "tags": [
+        "outdoor",
+        "trail",
+        "reuse"
+      ],
+      "type": "synthetic_vector_still"
+    },
+    {
+      "aspect_ratio": "9:16",
+      "available": true,
+      "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+      "id": "road",
+      "language": "neutral",
+      "markets": [
+        "US"
+      ],
+      "path": "data/assets/road.svg",
+      "rights": "self-created demo asset; no claim to real product photography",
+      "sha256": "2b4640f92340ad4d7610413fc86df81b8b8b8269dcb718a1d7ae74eeea1f0070",
+      "source": "original programmatic SVG for this project",
+      "tags": [
+        "travel",
+        "outdoor",
+        "capacity"
+      ],
+      "type": "synthetic_vector_still"
+    }
+  ],
+  "context": {
+    "markets": {
+      "DE": {
+        "angles": [
+          "随身通勤的容量与使用场景",
+          "办公桌上的重复使用习惯"
+        ],
+        "audience": "城市通勤人群（演示设定）",
+        "cta": "了解产品细节，不编造折扣",
+        "format": "9:16 / 20 seconds",
+        "language": "de-DE",
+        "platform": "竖屏社交短视频（演示渠道）",
+        "source": "synthetic market brief; not national audience research",
+        "style": "清晰自然的德语；镜头展示具体使用场景；只使用产品档案支持的事实"
+      },
+      "US": {
+        "angles": [
+          "出发前的轻装准备",
+          "短途休息时的使用场景"
+        ],
+        "audience": "周末户外与短途出行人群（演示设定）",
+        "cta": "Explore product details; no invented offers",
+        "format": "9:16 / 20 seconds",
+        "language": "en-US",
+        "platform": "竖屏社交短视频（演示渠道）",
+        "source": "synthetic market brief; not national audience research",
+        "style": "自然美式英语；以具体出行场景开场；避免虚构保温时长与防漏效果"
+      }
+    },
+    "product": {
+      "claims": {
+        "capacity": "350 ml capacity",
+        "lid": "Screw-top lid",
+        "material": "Stainless steel body",
+        "reuse": "Reusable cup"
+      },
+      "forbidden_claims": [
+        "24 hours",
+        "24 stunden",
+        "leakproof",
+        "auslaufsicher",
+        "BPA-free",
+        "dishwasher-safe",
+        "50%",
+        "guaranteed",
+        "lightweight",
+        "light-weight",
+        "durable",
+        "langlebig",
+        "robust",
+        "sustainable",
+        "nachhaltig",
+        "eco-friendly",
+        "secure",
+        "sicher",
+        "leichtgewicht"
+      ],
+      "id": "travel-cup",
+      "name": "ROAM 350",
+      "source": "项目自制演示档案；非真实商品检测数据",
+      "synthetic": true,
+      "unknown": [
+        "thermal retention duration",
+        "leakproof certification",
+        "dishwasher compatibility",
+        "price",
+        "discount",
+        "weight",
+        "durability testing",
+        "environmental impact"
+      ]
+    },
+    "rules": {
+      "clock": "serial simulated business minutes; not measured wall time",
+      "currency": "simulation_units",
+      "failure_cost": 2,
+      "failure_minutes": 10,
+      "max_generation_attempts_per_task": 3,
+      "note": "模拟费用覆盖本项目的方案制作流程，不含实际视频制作报价或真实模型账单。相同工具的不同档位是模拟业务服务，不代表模型能力承诺。",
+      "quality_threshold": 4,
+      "tiers": {
+        "economy": {
+          "cost": 7,
+          "description": "复用已选素材，简化表现形式；不削减交付字段",
+          "minutes": 60
+        },
+        "premium": {
+          "cost": 28,
+          "description": "更丰富的创意表达；仍须通过相同质量门槛",
+          "minutes": 240
+        },
+        "standard": {
+          "cost": 12,
+          "description": "标准脚本与分镜方案",
+          "minutes": 120
+        }
+      },
+      "tools": {
+        "estimate_cost": [
+          0,
+          0
+        ],
+        "load_context": [
+          0,
+          0
+        ],
+        "review_content": [
+          1,
+          5
+        ],
+        "revise_plan": [
+          0,
+          0
+        ],
+        "save_campaign": [
+          1,
+          1
+        ],
+        "search_assets": [
+          1,
+          2
+        ],
+        "stop": [
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "decision": {
+    "args": {
+      "reason": "当前计划预计总成本43单位，超出40单位硬预算3单位。所有任务已设为最低成本economy档位（7单位/条），无法进一步降低成本。DE-1已批准，DE-2/US-1/US-2待生成。无可行方案在预算内完成全部四条视频。恢复条件：增加预算至至少43单位，或减少视频数量（如仅完成DE-1和DE-2，总成本14单位）。"
+    },
+    "name": "stop"
+  },
+  "elapsed_minutes": 134,
+  "last_result": {
+    "approved_tasks": [
+      "DE-1"
+    ],
+    "gap": {
+      "alternatives": {
+        "economy": {
+          "cost": 7,
+          "description": "复用已选素材，简化表现形式；不削减交付字段",
+          "minutes": 60
+        },
+        "premium": {
+          "cost": 28,
+          "description": "更丰富的创意表达；仍须通过相同质量门槛",
+          "minutes": 240
+        },
+        "standard": {
+          "cost": 12,
+          "description": "标准脚本与分镜方案",
+          "minutes": 120
+        }
+      },
+      "breakdown": [
+        {
+          "remaining_cost": 0,
+          "remaining_minutes": 0,
+          "task_id": "DE-1"
+        },
+        {
+          "remaining_cost": 8,
+          "remaining_minutes": 65,
+          "task_id": "DE-2"
+        },
+        {
+          "remaining_cost": 8,
+          "remaining_minutes": 65,
+          "task_id": "US-1"
+        },
+        {
+          "remaining_cost": 8,
+          "remaining_minutes": 65,
+          "task_id": "US-2"
+        }
+      ],
+      "budget_gap": 3,
+      "elapsed_minutes": 134,
+      "feasible": false,
+      "minimum_budget_gap": 3,
+      "minimum_finish_minutes": 330,
+      "minimum_projected_total": 43,
+      "plan_version": 4,
+      "projected_finish_minutes": 330,
+      "projected_total": 43,
+      "remaining_cost": 25,
+      "remaining_minutes": 196,
+      "spent": 18,
+      "time_gap_minutes": 0
+    },
+    "ok": true,
+    "reason": "未完成。已审核并保留：DE-1。已支出 18；最低完成预计总费用 43，预算 40，缺口 3。需用户明确调整预算或范围后恢复。",
+    "status": "incomplete"
+  },
+  "mode": "live",
+  "model_calls": 21,
+  "model_config": {
+    "max_tokens": 6000,
+    "model": "vllm/Qwen/Qwen3.5-27B",
+    "sdk_retries": 0,
+    "temperature": 0.2,
+    "vllm_disable_thinking": true
+  },
+  "model_usage": {
+    "input_tokens": 82772,
+    "output_tokens": 4792,
+    "total_tokens": 87564
+  },
+  "plan": [
+    {
+      "angle": "随身通勤的容量与使用场景",
+      "asset_ids": [
+        "cup-hero",
+        "commute"
+      ],
+      "audience": "城市通勤人群",
+      "id": "DE-1",
+      "market": "DE",
+      "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+      "tier": "economy"
+    },
+    {
+      "angle": "办公桌上的重复使用习惯",
+      "asset_ids": [
+        "cup-detail",
+        "desk"
+      ],
+      "audience": "城市通勤人群",
+      "id": "DE-2",
+      "market": "DE",
+      "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调可重复使用的事实，避免提及环保、可持续等未验证声明。",
+      "tier": "economy"
+    },
+    {
+      "angle": "出发前的轻装准备",
+      "asset_ids": [
+        "cup-hero",
+        "trail"
+      ],
+      "audience": "周末户外与短途出行人群",
+      "id": "US-1",
+      "market": "US",
+      "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+      "tier": "economy"
+    },
+    {
+      "angle": "短途休息时的使用场景",
+      "asset_ids": [
+        "cup-detail",
+        "road"
+      ],
+      "audience": "周末户外与短途出行人群",
+      "id": "US-2",
+      "market": "US",
+      "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+      "tier": "economy"
+    }
+  ],
+  "plan_version": 4,
+  "quote": null,
+  "reason": "未完成。已审核并保留：DE-1。已支出 18；最低完成预计总费用 43，预算 40，缺口 3。需用户明确调整预算或范围后恢复。",
+  "resume_count": 1,
+  "saved": null,
+  "scenario": "normal",
+  "searches": [
+    "DE",
+    "US"
+  ],
+  "spent": 18,
+  "status": "incomplete",
+  "task_id": "final-budget-tight",
+  "trace": [
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 0,
+        "spent": 0
+      },
+      "arguments": {
+        "reason": "首先加载产品事实和市场简报，以获取制定计划所需的权威信息。"
+      },
+      "before": {
+        "elapsed_minutes": 0,
+        "spent": 0
+      },
+      "cost": 0,
+      "decision_reason": "首先加载产品事实和市场简报，以获取制定计划所需的权威信息。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 0,
+      "result": {
+        "markets": {
+          "DE": {
+            "angles": [
+              "随身通勤的容量与使用场景",
+              "办公桌上的重复使用习惯"
+            ],
+            "audience": "城市通勤人群（演示设定）",
+            "cta": "了解产品细节，不编造折扣",
+            "format": "9:16 / 20 seconds",
+            "language": "de-DE",
+            "platform": "竖屏社交短视频（演示渠道）",
+            "source": "synthetic market brief; not national audience research",
+            "style": "清晰自然的德语；镜头展示具体使用场景；只使用产品档案支持的事实"
+          },
+          "US": {
+            "angles": [
+              "出发前的轻装准备",
+              "短途休息时的使用场景"
+            ],
+            "audience": "周末户外与短途出行人群（演示设定）",
+            "cta": "Explore product details; no invented offers",
+            "format": "9:16 / 20 seconds",
+            "language": "en-US",
+            "platform": "竖屏社交短视频（演示渠道）",
+            "source": "synthetic market brief; not national audience research",
+            "style": "自然美式英语；以具体出行场景开场；避免虚构保温时长与防漏效果"
+          }
+        },
+        "ok": true,
+        "product": {
+          "claims": {
+            "capacity": "350 ml capacity",
+            "lid": "Screw-top lid",
+            "material": "Stainless steel body",
+            "reuse": "Reusable cup"
+          },
+          "forbidden_claims": [
+            "24 hours",
+            "24 stunden",
+            "leakproof",
+            "auslaufsicher",
+            "BPA-free",
+            "dishwasher-safe",
+            "50%",
+            "guaranteed",
+            "lightweight",
+            "light-weight",
+            "durable",
+            "langlebig",
+            "robust",
+            "sustainable",
+            "nachhaltig",
+            "eco-friendly",
+            "secure",
+            "sicher",
+            "leichtgewicht"
+          ],
+          "id": "travel-cup",
+          "name": "ROAM 350",
+          "source": "项目自制演示档案；非真实商品检测数据",
+          "synthetic": true,
+          "unknown": [
+            "thermal retention duration",
+            "leakproof certification",
+            "dishwasher compatibility",
+            "price",
+            "discount",
+            "weight",
+            "durability testing",
+            "environmental impact"
+          ]
+        },
+        "rules": {
+          "clock": "serial simulated business minutes; not measured wall time",
+          "currency": "simulation_units",
+          "failure_cost": 2,
+          "failure_minutes": 10,
+          "max_generation_attempts_per_task": 3,
+          "note": "模拟费用覆盖本项目的方案制作流程，不含实际视频制作报价或真实模型账单。相同工具的不同档位是模拟业务服务，不代表模型能力承诺。",
+          "quality_threshold": 4,
+          "tiers": {
+            "economy": {
+              "cost": 7,
+              "description": "复用已选素材，简化表现形式；不削减交付字段",
+              "minutes": 60
+            },
+            "premium": {
+              "cost": 28,
+              "description": "更丰富的创意表达；仍须通过相同质量门槛",
+              "minutes": 240
+            },
+            "standard": {
+              "cost": 12,
+              "description": "标准脚本与分镜方案",
+              "minutes": 120
+            }
+          },
+          "tools": {
+            "estimate_cost": [
+              0,
+              0
+            ],
+            "load_context": [
+              0,
+              0
+            ],
+            "review_content": [
+              1,
+              5
+            ],
+            "revise_plan": [
+              0,
+              0
+            ],
+            "save_campaign": [
+              1,
+              1
+            ],
+            "search_assets": [
+              1,
+              2
+            ],
+            "stop": [
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "step": 1,
+      "tool": "load_context"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 2,
+        "spent": 1
+      },
+      "arguments": {
+        "market": "DE",
+        "query": "",
+        "reason": "获取德国市场可用素材列表，为制定DE-1和DE-2任务计划做准备。"
+      },
+      "before": {
+        "elapsed_minutes": 0,
+        "spent": 0
+      },
+      "cost": 1,
+      "decision_reason": "获取德国市场可用素材列表，为制定DE-1和DE-2任务计划做准备。",
+      "kind": "tool",
+      "minutes": 2,
+      "plan_version": 0,
+      "result": {
+        "assets": [
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "cup-hero",
+            "language": "neutral",
+            "markets": [
+              "DE",
+              "US"
+            ],
+            "path": "data/assets/cup-hero.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "3b9bf0aaadd2d2e65541c07c21c1878cac526e67fac2de403f493d469ecbcabe",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "product",
+              "capacity",
+              "material"
+            ],
+            "type": "synthetic_vector_still"
+          },
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "cup-detail",
+            "language": "neutral",
+            "markets": [
+              "DE",
+              "US"
+            ],
+            "path": "data/assets/cup-detail.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "d19b13c321396ce1003b6ca3c574173edf4c03c12dd020c015125e7d5f7b24c5",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "lid",
+              "detail",
+              "product"
+            ],
+            "type": "synthetic_vector_still"
+          },
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "commute",
+            "language": "neutral",
+            "markets": [
+              "DE"
+            ],
+            "path": "data/assets/commute.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "fd625be89623f96bf03bf113d4d17307499ab9487571b77d6c995cf9e7ce6ca9",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "commute",
+              "city",
+              "capacity"
+            ],
+            "type": "synthetic_vector_still"
+          },
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "desk",
+            "language": "neutral",
+            "markets": [
+              "DE"
+            ],
+            "path": "data/assets/desk.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "d326f7e07f58bdb29ffba2f7a44cf63499aa0918d9a155048a2c2a126748337e",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "desk",
+              "reuse",
+              "office"
+            ],
+            "type": "synthetic_vector_still"
+          }
+        ],
+        "count": 4,
+        "ok": true,
+        "synthetic": true
+      },
+      "step": 2,
+      "tool": "search_assets"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "arguments": {
+        "market": "US",
+        "query": "",
+        "reason": "获取美国市场可用素材列表，为制定US-1和US-2任务计划做准备。"
+      },
+      "before": {
+        "elapsed_minutes": 2,
+        "spent": 1
+      },
+      "cost": 1,
+      "decision_reason": "获取美国市场可用素材列表，为制定US-1和US-2任务计划做准备。",
+      "kind": "tool",
+      "minutes": 2,
+      "plan_version": 0,
+      "result": {
+        "assets": [
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "cup-hero",
+            "language": "neutral",
+            "markets": [
+              "DE",
+              "US"
+            ],
+            "path": "data/assets/cup-hero.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "3b9bf0aaadd2d2e65541c07c21c1878cac526e67fac2de403f493d469ecbcabe",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "product",
+              "capacity",
+              "material"
+            ],
+            "type": "synthetic_vector_still"
+          },
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "cup-detail",
+            "language": "neutral",
+            "markets": [
+              "DE",
+              "US"
+            ],
+            "path": "data/assets/cup-detail.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "d19b13c321396ce1003b6ca3c574173edf4c03c12dd020c015125e7d5f7b24c5",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "lid",
+              "detail",
+              "product"
+            ],
+            "type": "synthetic_vector_still"
+          },
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "trail",
+            "language": "neutral",
+            "markets": [
+              "US"
+            ],
+            "path": "data/assets/trail.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "900fbd71da1c1437c12ad46e533d89c2f497379888cbc2f6521c38c8770e013c",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "outdoor",
+              "trail",
+              "reuse"
+            ],
+            "type": "synthetic_vector_still"
+          },
+          {
+            "aspect_ratio": "9:16",
+            "available": true,
+            "description": "平面杯形与旋盖示意、抽象背景和英文场景标签；无真人、无背包、无真实街景、无实拍金属质感。可做裁切、轻推近和字幕叠加，不能假设素材含真实动作或额外场景。",
+            "id": "road",
+            "language": "neutral",
+            "markets": [
+              "US"
+            ],
+            "path": "data/assets/road.svg",
+            "rights": "self-created demo asset; no claim to real product photography",
+            "sha256": "2b4640f92340ad4d7610413fc86df81b8b8b8269dcb718a1d7ae74eeea1f0070",
+            "source": "original programmatic SVG for this project",
+            "tags": [
+              "travel",
+              "outdoor",
+              "capacity"
+            ],
+            "type": "synthetic_vector_still"
+          }
+        ],
+        "count": 4,
+        "ok": true,
+        "synthetic": true
+      },
+      "step": 3,
+      "tool": "search_assets"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "arguments": {
+        "reason": "根据产品事实和市场简报，为DE和US市场各创建两个任务，使用标准档位，确保策略仅基于已验证的产品特性（容量、材质、旋盖、可重复使用），避免虚构保温、防漏等未验证声明。",
+        "tasks": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "standard"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调环保使用习惯，避免提及未验证的耐用性或可持续性。",
+            "tier": "standard"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "standard"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "standard"
+          }
+        ]
+      },
+      "before": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "cost": 0,
+      "decision_reason": "根据产品事实和市场简报，为DE和US市场各创建两个任务，使用标准档位，确保策略仅基于已验证的产品特性（容量、材质、旋盖、可重复使用），避免虚构保温、防漏等未验证声明。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 1,
+      "result": {
+        "invalidated": [],
+        "ok": true,
+        "plan": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "standard"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调环保使用习惯，避免提及未验证的耐用性或可持续性。",
+            "tier": "standard"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "standard"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "standard"
+          }
+        ],
+        "plan_version": 1,
+        "retained": []
+      },
+      "step": 4,
+      "tool": "revise_plan"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "arguments": {
+        "reason": "在生成脚本前，需获取当前标准档位四条方案的总报价，确认是否在40单位硬预算内，并评估可行性。"
+      },
+      "before": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "cost": 0,
+      "decision_reason": "在生成脚本前，需获取当前标准档位四条方案的总报价，确认是否在40单位硬预算内，并评估可行性。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 1,
+      "result": {
+        "alternatives": {
+          "economy": {
+            "cost": 7,
+            "description": "复用已选素材，简化表现形式；不削减交付字段",
+            "minutes": 60
+          },
+          "premium": {
+            "cost": 28,
+            "description": "更丰富的创意表达；仍须通过相同质量门槛",
+            "minutes": 240
+          },
+          "standard": {
+            "cost": 12,
+            "description": "标准脚本与分镜方案",
+            "minutes": 120
+          }
+        },
+        "breakdown": [
+          {
+            "remaining_cost": 13,
+            "remaining_minutes": 125,
+            "task_id": "DE-1"
+          },
+          {
+            "remaining_cost": 13,
+            "remaining_minutes": 125,
+            "task_id": "DE-2"
+          },
+          {
+            "remaining_cost": 13,
+            "remaining_minutes": 125,
+            "task_id": "US-1"
+          },
+          {
+            "remaining_cost": 13,
+            "remaining_minutes": 125,
+            "task_id": "US-2"
+          }
+        ],
+        "budget_gap": 15,
+        "elapsed_minutes": 4,
+        "feasible": false,
+        "minimum_budget_gap": 0,
+        "minimum_finish_minutes": 265,
+        "minimum_projected_total": 35,
+        "ok": true,
+        "plan_version": 1,
+        "projected_finish_minutes": 505,
+        "projected_total": 55,
+        "remaining_cost": 53,
+        "remaining_minutes": 501,
+        "spent": 2,
+        "time_gap_minutes": 0
+      },
+      "step": 5,
+      "tool": "estimate_cost"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "arguments": {
+        "reason": "当前标准档位总成本55单位超出40单位硬预算，需将全部任务降级为economy档位（每条7单位，总计28单位）以确保在预算内完成四条视频交付，同时保留完整任务数量和交付字段。",
+        "tasks": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调环保使用习惯，避免提及未验证的耐用性或可持续性。",
+            "tier": "economy"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "economy"
+          }
+        ]
+      },
+      "before": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "cost": 0,
+      "decision_reason": "当前标准档位总成本55单位超出40单位硬预算，需将全部任务降级为economy档位（每条7单位，总计28单位）以确保在预算内完成四条视频交付，同时保留完整任务数量和交付字段。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 2,
+      "result": {
+        "invalidated": [],
+        "ok": true,
+        "plan": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调环保使用习惯，避免提及未验证的耐用性或可持续性。",
+            "tier": "economy"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "economy"
+          }
+        ],
+        "plan_version": 2,
+        "retained": []
+      },
+      "step": 6,
+      "tool": "revise_plan"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "arguments": {
+        "reason": "当前计划已将四条任务调整为economy档位，需再次获取报价确认总成本是否在40单位硬预算内，并评估可行性。"
+      },
+      "before": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "cost": 0,
+      "decision_reason": "当前计划已将四条任务调整为economy档位，需再次获取报价确认总成本是否在40单位硬预算内，并评估可行性。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 2,
+      "result": {
+        "alternatives": {
+          "economy": {
+            "cost": 7,
+            "description": "复用已选素材，简化表现形式；不削减交付字段",
+            "minutes": 60
+          },
+          "premium": {
+            "cost": 28,
+            "description": "更丰富的创意表达；仍须通过相同质量门槛",
+            "minutes": 240
+          },
+          "standard": {
+            "cost": 12,
+            "description": "标准脚本与分镜方案",
+            "minutes": 120
+          }
+        },
+        "breakdown": [
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "DE-1"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "DE-2"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "US-1"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "US-2"
+          }
+        ],
+        "budget_gap": 0,
+        "elapsed_minutes": 4,
+        "feasible": true,
+        "minimum_budget_gap": 0,
+        "minimum_finish_minutes": 265,
+        "minimum_projected_total": 35,
+        "ok": true,
+        "plan_version": 2,
+        "projected_finish_minutes": 265,
+        "projected_total": 35,
+        "remaining_cost": 33,
+        "remaining_minutes": 261,
+        "spent": 2,
+        "time_gap_minutes": 0
+      },
+      "step": 7,
+      "tool": "estimate_cost"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 64,
+        "spent": 9
+      },
+      "arguments": {
+        "reason": "当前计划已确认可行（总成本35单位，低于40单位硬预算），开始按顺序生成DE-1任务的脚本与分镜，使用economy档位和已选素材cup-hero、commute。",
+        "task_id": "DE-1"
+      },
+      "before": {
+        "elapsed_minutes": 4,
+        "spent": 2
+      },
+      "cost": 7,
+      "decision_reason": "当前计划已确认可行（总成本35单位，低于40单位硬预算），开始按顺序生成DE-1任务的脚本与分镜，使用economy档位和已选素材cup-hero、commute。",
+      "kind": "tool",
+      "minutes": 60,
+      "plan_version": 2,
+      "result": {
+        "ok": true,
+        "script": {
+          "claim_ids": [
+            "capacity",
+            "lid",
+            "material",
+            "reuse"
+          ],
+          "cta": "Entdecke die Details.",
+          "hook": "Perfekt für deinen Weg zur Arbeit.",
+          "language": "de-DE",
+          "localization_rationale": "针对合成受众简报中的“城市通勤人群”，采用非正式“du”以建立亲切感。内容严格基于提供的合成素材（cup-hero, commute）展示350ml容量和旋盖设计，避免虚构防漏或保温等未验证属性。视觉描述使用中文以符合内部沟通习惯，强调通过镜头切换和字幕叠加来呈现通勤场景，而非依赖不存在的实拍动作。",
+          "shots": [
+            {
+              "asset_id": "cup-hero",
+              "end": 5,
+              "on_screen": "350 ml",
+              "start": 0,
+              "visual": "平面杯形与旋盖示意，抽象背景，镜头轻推近展示350ml容量标签。",
+              "voiceover": "Dein ROAM 350: 350 Milliliter Platz."
+            },
+            {
+              "asset_id": "cup-hero",
+              "end": 10,
+              "on_screen": "Edelstahl & Schraubverschluss",
+              "start": 5,
+              "visual": "平面杯形特写，强调不锈钢杯身质感与旋盖结构。",
+              "voiceover": "Edelstahl-Körper mit Schraubverschluss."
+            },
+            {
+              "asset_id": "commute",
+              "end": 15,
+              "on_screen": "Immer dabei",
+              "start": 10,
+              "visual": "平面杯形置于抽象通勤背景中，字幕叠加展示使用场景。",
+              "voiceover": "Immer dabei für deinen Weg."
+            },
+            {
+              "asset_id": "commute",
+              "end": 20,
+              "on_screen": "Wiederverwendbar",
+              "start": 15,
+              "visual": "平面杯形与抽象背景，画面定格，显示重复使用标识。",
+              "voiceover": "Wiederverwendbar. Entdecke die Details."
+            }
+          ],
+          "task_id": "DE-1",
+          "title": "ROAM 350: Dein Begleiter im Stadtverkehr"
+        },
+        "status": "generated",
+        "task_id": "DE-1"
+      },
+      "step": 8,
+      "tool": "generate_script"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 69,
+        "spent": 10
+      },
+      "arguments": {
+        "reason": "DE-1脚本已生成，需检查其内容是否符合产品事实（350ml容量、旋盖、不锈钢材质、可重复使用），是否避免虚构保温、防漏等未验证声明，以及德语表达和场景是否匹配通勤主题。",
+        "task_id": "DE-1"
+      },
+      "before": {
+        "elapsed_minutes": 64,
+        "spent": 9
+      },
+      "cost": 1,
+      "decision_reason": "DE-1脚本已生成，需检查其内容是否符合产品事实（350ml容量、旋盖、不锈钢材质、可重复使用），是否避免虚构保温、防漏等未验证声明，以及德语表达和场景是否匹配通勤主题。",
+      "kind": "tool",
+      "minutes": 5,
+      "plan_version": 2,
+      "result": {
+        "approved": true,
+        "ok": true,
+        "review": {
+          "approved": true,
+          "evidence_score": 5,
+          "issues": [],
+          "language_score": 5,
+          "market_fit_score": 5,
+          "rationale": "该方案严格遵循合成简报，针对“城市通勤人群”使用非正式德语“du”建立亲切感。内容仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用等已验证事实，未出现防漏、保温、轻量化或环保等禁止性推断。脚本时长20秒，每句配音均控制在55词以内，且视觉描述明确基于合成矢量素材（cup-hero, commute），未虚构实拍动作或场景。整体符合德语本地化要求与演示渠道规范。"
+        },
+        "task_id": "DE-1"
+      },
+      "step": 9,
+      "tool": "review_content"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 129,
+        "spent": 17
+      },
+      "arguments": {
+        "reason": "DE-1已通过审核，按计划继续生成DE-2任务的脚本与分镜，使用economy档位和已选素材cup-detail、desk，聚焦办公场景与可重复使用特性。",
+        "task_id": "DE-2"
+      },
+      "before": {
+        "elapsed_minutes": 69,
+        "spent": 10
+      },
+      "cost": 7,
+      "decision_reason": "DE-1已通过审核，按计划继续生成DE-2任务的脚本与分镜，使用economy档位和已选素材cup-detail、desk，聚焦办公场景与可重复使用特性。",
+      "kind": "tool",
+      "minutes": 60,
+      "plan_version": 2,
+      "result": {
+        "ok": true,
+        "script": {
+          "claim_ids": [
+            "capacity",
+            "lid",
+            "material",
+            "reuse"
+          ],
+          "cta": "Sieh dir die Details an.",
+          "hook": "Jeden Tag neu auf deinem Tisch.",
+          "language": "de-DE",
+          "localization_rationale": "针对“城市通勤人群”的演示设定，脚本聚焦“办公桌上的重复使用习惯”这一创意角度。使用非正式“du”以拉近与目标受众距离。视觉描述基于提供的合成矢量素材（cup-detail, desk），仅展示静态构图、裁切和字幕叠加，不虚构真人或动态场景。文案严格限制在已验证的四个事实（350ml、不锈钢、旋盖、可重复使用），避免任何关于耐用性、环保或防漏的未验证声明。",
+          "shots": [
+            {
+              "asset_id": "desk",
+              "end": 5,
+              "on_screen": "350 ml",
+              "start": 0,
+              "visual": "合成矢量图：抽象办公桌面背景，中央放置ROAM 350平面杯形示意。镜头轻微推近，叠加德语字幕“350 ml”。",
+              "voiceover": "Dein Tisch, dein Cup. 350 Milliliter Platz."
+            },
+            {
+              "asset_id": "cup-detail",
+              "end": 10,
+              "on_screen": "Edelstahl",
+              "start": 5,
+              "visual": "合成矢量图：杯身与旋盖的特写示意，抽象背景。镜头聚焦旋盖结构，叠加德语字幕“Edelstahl”。",
+              "voiceover": "Ein Körper aus Edelstahl mit Schraubdeckel."
+            },
+            {
+              "asset_id": "desk",
+              "end": 15,
+              "on_screen": "Wiederverwendbar",
+              "start": 10,
+              "visual": "合成矢量图：回到办公桌场景，杯身示意保持静止。镜头轻微平移，叠加德语字幕“Wiederverwendbar”。",
+              "voiceover": "Ein wiederverwendbarer Begleiter für deinen Alltag."
+            },
+            {
+              "asset_id": "cup-detail",
+              "end": 20,
+              "on_screen": "ROAM 350",
+              "start": 15,
+              "visual": "合成矢量图：杯身与旋盖的完整示意，背景简洁。画面定格，叠加德语字幕“ROAM 350”。",
+              "voiceover": "ROAM 350. Sieh dir die Details an."
+            }
+          ],
+          "task_id": "DE-2",
+          "title": "Dein Tisch, dein Cup"
+        },
+        "status": "generated",
+        "task_id": "DE-2"
+      },
+      "step": 10,
+      "tool": "generate_script"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "arguments": {
+        "reason": "DE-2脚本已生成，需检查其内容是否符合产品事实（350ml容量、旋盖、不锈钢材质、可重复使用），是否避免虚构保温、防漏等未验证声明，以及德语表达和场景是否匹配办公主题。",
+        "task_id": "DE-2"
+      },
+      "before": {
+        "elapsed_minutes": 129,
+        "spent": 17
+      },
+      "cost": 1,
+      "decision_reason": "DE-2脚本已生成，需检查其内容是否符合产品事实（350ml容量、旋盖、不锈钢材质、可重复使用），是否避免虚构保温、防漏等未验证声明，以及德语表达和场景是否匹配办公主题。",
+      "kind": "tool",
+      "minutes": 5,
+      "plan_version": 2,
+      "result": {
+        "approved": false,
+        "ok": true,
+        "review": {
+          "approved": false,
+          "evidence_score": 3,
+          "issues": [
+            "策略描述中提及“通过字幕强调环保使用习惯”，但产品档案明确禁止“sustainable”、“nachhaltig”、“eco-friendly”等环保相关声明，且未提供相关事实依据。",
+            "脚本中“Ein wiederverwendbarer Begleiter für deinen Alltag”虽提及可重复使用，但结合策略中的环保暗示，存在将“可重复使用”过度解读为“环保/可持续”的风险，需明确区分事实与推断。"
+          ],
+          "language_score": 5,
+          "market_fit_score": 4,
+          "rationale": "该计划针对“城市通勤人群”的演示设定，聚焦“办公桌上的重复使用习惯”角度，使用非正式德语“du”拉近受众距离。脚本严格基于已验证事实（350ml、不锈钢、旋盖、可重复使用），视觉描述符合合成矢量素材限制。但策略中“强调环保使用习惯”的表述与禁止的环保声明冲突，且未提供事实支撑，导致证据分扣分。"
+        },
+        "task_id": "DE-2"
+      },
+      "step": 11,
+      "tool": "review_content"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "arguments": {
+        "reason": "DE-2任务因策略中提及“环保使用习惯”被拒，需修正策略描述，仅强调“可重复使用”这一已验证事实，删除任何环保暗示，确保符合产品档案限制。",
+        "tasks": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调可重复使用的事实，避免提及环保、可持续等未验证声明。",
+            "tier": "economy"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "economy"
+          }
+        ]
+      },
+      "before": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "cost": 0,
+      "decision_reason": "DE-2任务因策略中提及“环保使用习惯”被拒，需修正策略描述，仅强调“可重复使用”这一已验证事实，删除任何环保暗示，确保符合产品档案限制。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 3,
+      "result": {
+        "invalidated": [
+          "DE-2"
+        ],
+        "ok": true,
+        "plan": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调可重复使用的事实，避免提及环保、可持续等未验证声明。",
+            "tier": "economy"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "economy"
+          }
+        ],
+        "plan_version": 3,
+        "retained": [
+          "DE-1"
+        ]
+      },
+      "step": 12,
+      "tool": "revise_plan"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "arguments": {
+        "reason": "DE-2任务策略已修正，删除环保暗示，仅保留可重复使用事实。需重新评估当前计划（DE-1已批准，DE-2待重新生成，US-1/US-2待生成）的剩余成本与可行性，确保在40单位预算内完成全部四条视频。"
+      },
+      "before": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "cost": 0,
+      "decision_reason": "DE-2任务策略已修正，删除环保暗示，仅保留可重复使用事实。需重新评估当前计划（DE-1已批准，DE-2待重新生成，US-1/US-2待生成）的剩余成本与可行性，确保在40单位预算内完成全部四条视频。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 3,
+      "result": {
+        "alternatives": {
+          "economy": {
+            "cost": 7,
+            "description": "复用已选素材，简化表现形式；不削减交付字段",
+            "minutes": 60
+          },
+          "premium": {
+            "cost": 28,
+            "description": "更丰富的创意表达；仍须通过相同质量门槛",
+            "minutes": 240
+          },
+          "standard": {
+            "cost": 12,
+            "description": "标准脚本与分镜方案",
+            "minutes": 120
+          }
+        },
+        "breakdown": [
+          {
+            "remaining_cost": 0,
+            "remaining_minutes": 0,
+            "task_id": "DE-1"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "DE-2"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "US-1"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "US-2"
+          }
+        ],
+        "budget_gap": 3,
+        "elapsed_minutes": 134,
+        "feasible": false,
+        "minimum_budget_gap": 3,
+        "minimum_finish_minutes": 330,
+        "minimum_projected_total": 43,
+        "ok": true,
+        "plan_version": 3,
+        "projected_finish_minutes": 330,
+        "projected_total": 43,
+        "remaining_cost": 25,
+        "remaining_minutes": 196,
+        "spent": 18,
+        "time_gap_minutes": 0
+      },
+      "step": 13,
+      "tool": "estimate_cost"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "arguments": {
+        "reason": "DE-2任务策略已修正，删除环保暗示，仅保留可重复使用事实。当前计划中DE-1已批准，DE-2/US-1/US-2待生成。需重新评估成本可行性，当前预算缺口3单位，需寻找替代方案或调整策略以在40单位内完成。",
+        "tasks": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调可重复使用的事实，避免提及环保、可持续等未验证声明。",
+            "tier": "economy"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "economy"
+          }
+        ]
+      },
+      "before": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "cost": 0,
+      "decision_reason": "DE-2任务策略已修正，删除环保暗示，仅保留可重复使用事实。当前计划中DE-1已批准，DE-2/US-1/US-2待生成。需重新评估成本可行性，当前预算缺口3单位，需寻找替代方案或调整策略以在40单位内完成。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 4,
+      "result": {
+        "invalidated": [],
+        "ok": true,
+        "plan": [
+          {
+            "angle": "随身通勤的容量与使用场景",
+            "asset_ids": [
+              "cup-hero",
+              "commute"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-1",
+            "market": "DE",
+            "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中的便携性。使用cup-hero和commute素材，通过字幕和镜头切换强调容量与使用场景，避免虚构保温或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "办公桌上的重复使用习惯",
+            "asset_ids": [
+              "cup-detail",
+              "desk"
+            ],
+            "audience": "城市通勤人群",
+            "id": "DE-2",
+            "market": "DE",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合desk素材展示办公场景。通过字幕强调可重复使用的事实，避免提及环保、可持续等未验证声明。",
+            "tier": "economy"
+          },
+          {
+            "angle": "出发前的轻装准备",
+            "asset_ids": [
+              "cup-hero",
+              "trail"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-1",
+            "market": "US",
+            "strategy": "以350ml容量和旋盖设计为卖点，结合trail素材展示户外准备场景。强调便携性和容量，避免虚构保温时长或防漏效果。",
+            "tier": "economy"
+          },
+          {
+            "angle": "短途休息时的使用场景",
+            "asset_ids": [
+              "cup-detail",
+              "road"
+            ],
+            "audience": "周末户外与短途出行人群",
+            "id": "US-2",
+            "market": "US",
+            "strategy": "聚焦不锈钢材质和可重复使用特性，结合road素材展示短途休息场景。通过字幕强调实用性和容量，避免提及未验证的耐用性或环保认证。",
+            "tier": "economy"
+          }
+        ],
+        "plan_version": 4,
+        "retained": [
+          "DE-1"
+        ]
+      },
+      "step": 14,
+      "tool": "revise_plan"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "arguments": {
+        "reason": "当前计划版本4中DE-1已批准，DE-2/US-1/US-2待生成。需重新评估在40单位硬预算下完成全部四条视频的可行性，确认是否存在预算缺口及替代方案。"
+      },
+      "before": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "cost": 0,
+      "decision_reason": "当前计划版本4中DE-1已批准，DE-2/US-1/US-2待生成。需重新评估在40单位硬预算下完成全部四条视频的可行性，确认是否存在预算缺口及替代方案。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 4,
+      "result": {
+        "alternatives": {
+          "economy": {
+            "cost": 7,
+            "description": "复用已选素材，简化表现形式；不削减交付字段",
+            "minutes": 60
+          },
+          "premium": {
+            "cost": 28,
+            "description": "更丰富的创意表达；仍须通过相同质量门槛",
+            "minutes": 240
+          },
+          "standard": {
+            "cost": 12,
+            "description": "标准脚本与分镜方案",
+            "minutes": 120
+          }
+        },
+        "breakdown": [
+          {
+            "remaining_cost": 0,
+            "remaining_minutes": 0,
+            "task_id": "DE-1"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "DE-2"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "US-1"
+          },
+          {
+            "remaining_cost": 8,
+            "remaining_minutes": 65,
+            "task_id": "US-2"
+          }
+        ],
+        "budget_gap": 3,
+        "elapsed_minutes": 134,
+        "feasible": false,
+        "minimum_budget_gap": 3,
+        "minimum_finish_minutes": 330,
+        "minimum_projected_total": 43,
+        "ok": true,
+        "plan_version": 4,
+        "projected_finish_minutes": 330,
+        "projected_total": 43,
+        "remaining_cost": 25,
+        "remaining_minutes": 196,
+        "spent": 18,
+        "time_gap_minutes": 0
+      },
+      "step": 15,
+      "tool": "estimate_cost"
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "arguments": {
+        "reason": "当前计划预计总成本43单位，超出40单位硬预算3单位。所有任务已设为最低成本economy档位（7单位/条），无法进一步降低成本。DE-1已批准，DE-2/US-1/US-2待生成。无可行方案在预算内完成全部四条视频。恢复条件：增加预算至至少43单位，或减少视频数量（如仅完成DE-1和DE-2，总成本14单位）。"
+      },
+      "before": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "cost": 0,
+      "decision_reason": "当前计划预计总成本43单位，超出40单位硬预算3单位。所有任务已设为最低成本economy档位（7单位/条），无法进一步降低成本。DE-1已批准，DE-2/US-1/US-2待生成。无可行方案在预算内完成全部四条视频。恢复条件：增加预算至至少43单位，或减少视频数量（如仅完成DE-1和DE-2，总成本14单位）。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 4,
+      "result": {
+        "gap": {
+          "alternatives": {
+            "economy": {
+              "cost": 7,
+              "description": "复用已选素材，简化表现形式；不削减交付字段",
+              "minutes": 60
+            },
+            "premium": {
+              "cost": 28,
+              "description": "更丰富的创意表达；仍须通过相同质量门槛",
+              "minutes": 240
+            },
+            "standard": {
+              "cost": 12,
+              "description": "标准脚本与分镜方案",
+              "minutes": 120
+            }
+          },
+          "breakdown": [
+            {
+              "remaining_cost": 0,
+              "remaining_minutes": 0,
+              "task_id": "DE-1"
+            },
+            {
+              "remaining_cost": 8,
+              "remaining_minutes": 65,
+              "task_id": "DE-2"
+            },
+            {
+              "remaining_cost": 8,
+              "remaining_minutes": 65,
+              "task_id": "US-1"
+            },
+            {
+              "remaining_cost": 8,
+              "remaining_minutes": 65,
+              "task_id": "US-2"
+            }
+          ],
+          "budget_gap": 3,
+          "elapsed_minutes": 134,
+          "feasible": false,
+          "minimum_budget_gap": 3,
+          "minimum_finish_minutes": 330,
+          "minimum_projected_total": 43,
+          "plan_version": 4,
+          "projected_finish_minutes": 330,
+          "projected_total": 43,
+          "remaining_cost": 25,
+          "remaining_minutes": 196,
+          "spent": 18,
+          "time_gap_minutes": 0
+        },
+        "ok": true,
+        "reason": "当前计划预计总成本43单位，超出40单位硬预算3单位。所有任务已设为最低成本economy档位（7单位/条），无法进一步降低成本。DE-1已批准，DE-2/US-1/US-2待生成。无可行方案在预算内完成全部四条视频。恢复条件：增加预算至至少43单位，或减少视频数量（如仅完成DE-1和DE-2，总成本14单位）。",
+        "status": "incomplete"
+      },
+      "step": 16,
+      "tool": "stop"
+    },
+    {
+      "kind": "resume",
+      "patch": {},
+      "reason": "Explicit operator resume; spent cost and valid artifacts retained",
+      "repair": false,
+      "wait_minutes": 0
+    },
+    {
+      "actor": "live:vllm/Qwen/Qwen3.5-27B",
+      "after": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "arguments": {
+        "reason": "当前计划预计总成本43单位，超出40单位硬预算3单位。所有任务已设为最低成本economy档位（7单位/条），无法进一步降低成本。DE-1已批准，DE-2/US-1/US-2待生成。无可行方案在预算内完成全部四条视频。恢复条件：增加预算至至少43单位，或减少视频数量（如仅完成DE-1和DE-2，总成本14单位）。"
+      },
+      "before": {
+        "elapsed_minutes": 134,
+        "spent": 18
+      },
+      "cost": 0,
+      "decision_reason": "当前计划预计总成本43单位，超出40单位硬预算3单位。所有任务已设为最低成本economy档位（7单位/条），无法进一步降低成本。DE-1已批准，DE-2/US-1/US-2待生成。无可行方案在预算内完成全部四条视频。恢复条件：增加预算至至少43单位，或减少视频数量（如仅完成DE-1和DE-2，总成本14单位）。",
+      "kind": "tool",
+      "minutes": 0,
+      "plan_version": 4,
+      "result": {
+        "approved_tasks": [
+          "DE-1"
+        ],
+        "gap": {
+          "alternatives": {
+            "economy": {
+              "cost": 7,
+              "description": "复用已选素材，简化表现形式；不削减交付字段",
+              "minutes": 60
+            },
+            "premium": {
+              "cost": 28,
+              "description": "更丰富的创意表达；仍须通过相同质量门槛",
+              "minutes": 240
+            },
+            "standard": {
+              "cost": 12,
+              "description": "标准脚本与分镜方案",
+              "minutes": 120
+            }
+          },
+          "breakdown": [
+            {
+              "remaining_cost": 0,
+              "remaining_minutes": 0,
+              "task_id": "DE-1"
+            },
+            {
+              "remaining_cost": 8,
+              "remaining_minutes": 65,
+              "task_id": "DE-2"
+            },
+            {
+              "remaining_cost": 8,
+              "remaining_minutes": 65,
+              "task_id": "US-1"
+            },
+            {
+              "remaining_cost": 8,
+              "remaining_minutes": 65,
+              "task_id": "US-2"
+            }
+          ],
+          "budget_gap": 3,
+          "elapsed_minutes": 134,
+          "feasible": false,
+          "minimum_budget_gap": 3,
+          "minimum_finish_minutes": 330,
+          "minimum_projected_total": 43,
+          "plan_version": 4,
+          "projected_finish_minutes": 330,
+          "projected_total": 43,
+          "remaining_cost": 25,
+          "remaining_minutes": 196,
+          "spent": 18,
+          "time_gap_minutes": 0
+        },
+        "ok": true,
+        "reason": "未完成。已审核并保留：DE-1。已支出 18；最低完成预计总费用 43，预算 40，缺口 3。需用户明确调整预算或范围后恢复。",
+        "status": "incomplete"
+      },
+      "step": 17,
+      "tool": "stop"
+    }
+  ]
+}

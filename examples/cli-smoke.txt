@@ -1,0 +1,18 @@
+Command: content-agent --state-dir .runtime/cli-check run --id cli-final-gap --input examples/inputs/impossible.json
+Expected exit=2; actual exit=2
+{"step": 1, "tool": "load_context", "reason": "[离线脚本策略] 读取合成产品与市场资料", "ok": true, "observation": {}, "cost": 0, "spent": 0}
+{"step": 2, "tool": "search_assets", "reason": "[离线脚本策略] 检索该市场可用素材", "ok": true, "observation": {}, "cost": 1, "spent": 1}
+{"step": 3, "tool": "search_assets", "reason": "[离线脚本策略] 检索该市场可用素材", "ok": true, "observation": {}, "cost": 1, "spent": 2}
+{"step": 4, "tool": "revise_plan", "reason": "[离线脚本策略] 建立各市场独立创意与任务依赖", "ok": true, "observation": {"retained": [], "invalidated": []}, "cost": 0, "spent": 2}
+{"step": 5, "tool": "estimate_cost", "reason": "[离线脚本策略] 执行前核对全过程成本和完成时间", "ok": true, "observation": {"projected_total": 119, "budget_gap": 109, "feasible": false}, "cost": 0, "spent": 2}
+{"step": 6, "tool": "stop", "reason": "[离线脚本策略] 最低可行档位仍不可行，成本缺口109，时间缺口0分钟", "ok": true, "observation": {"status": "incomplete"}, "cost": 0, "spent": 2}
+{
+  "task_id": "cli-final-gap",
+  "status": "incomplete",
+  "reason": "[离线脚本策略] 最低可行档位仍不可行，成本缺口109，时间缺口0分钟",
+  "mode": "offline",
+  "spent": 2,
+  "elapsed_minutes": 4,
+  "calls": 6,
+  "saved": null
+}

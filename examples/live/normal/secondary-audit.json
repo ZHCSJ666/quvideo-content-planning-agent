@@ -1,0 +1,12 @@
+{
+  "reviewer": "Codex implementation audit; not human native-language review",
+  "structural_grounding_checks": {
+    "DE-1": [],
+    "DE-2": [],
+    "US-1": [],
+    "US-2": []
+  },
+  "observed": "Rationales refer to synthetic audience briefs. Previously observed secure wording was rejected and revised before delivery. No unverified lightweight/durable/environmental benefit found in final customer-facing text.",
+  "passed": true,
+  "limitations": "Finite rules and AI review; no native human review, rendered video or marketing effect validation."
+}

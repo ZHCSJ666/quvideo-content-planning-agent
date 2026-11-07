@@ -1,0 +1,311 @@
+{
+  "task_id": "live-verified-normal",
+  "brief": {
+    "theme": "ROAM 350 便携杯：德国与美国市场的多语言短视频内容活动",
+    "product_id": "travel-cup",
+    "markets": {
+      "DE": 2,
+      "US": 2
+    },
+    "budget_units": 100,
+    "deadline_hours": 48.0,
+    "max_calls": 40
+  },
+  "mode": "live",
+  "status": "completed",
+  "plan": [
+    {
+      "id": "DE-1",
+      "market": "DE",
+      "angle": "随身通勤的容量与使用场景",
+      "audience": "城市通勤人群",
+      "strategy": "以通勤场景开场，展示350ml容量与旋盖设计，强调不锈钢材质与重复使用，引导了解产品细节。",
+      "asset_ids": [
+        "cup-hero",
+        "commute"
+      ],
+      "tier": "standard"
+    },
+    {
+      "id": "DE-2",
+      "market": "DE",
+      "angle": "办公桌上的重复使用习惯",
+      "audience": "城市通勤人群",
+      "strategy": "以办公场景切入，突出重复使用习惯与环保理念，展示杯盖细节与材质，引导了解产品细节。",
+      "asset_ids": [
+        "cup-detail",
+        "desk"
+      ],
+      "tier": "standard"
+    },
+    {
+      "id": "US-1",
+      "market": "US",
+      "angle": "出发前的轻装准备",
+      "audience": "周末户外与短途出行人群",
+      "strategy": "以出发前准备场景开场，展示350ml容量与不锈钢材质，强调轻便与重复使用，引导探索产品细节。",
+      "asset_ids": [
+        "cup-hero",
+        "trail"
+      ],
+      "tier": "standard"
+    },
+    {
+      "id": "US-2",
+      "market": "US",
+      "angle": "短途休息时的使用场景",
+      "audience": "周末户外与短途出行人群",
+      "strategy": "以短途休息场景切入，展示旋盖设计与使用便利性，强调户外适用性，引导探索产品细节。",
+      "asset_ids": [
+        "cup-detail",
+        "road"
+      ],
+      "tier": "standard"
+    }
+  ],
+  "artifacts": {
+    "DE-1": {
+      "task_hash": "b68cc297f12f7fe6da05524d39f6d3806379f9990fcbe93f9070dc9a6fa91818",
+      "status": "approved",
+      "script": {
+        "task_id": "DE-1",
+        "language": "de-DE",
+        "title": "ROAM 350: Dein Begleiter für den Weg zur Arbeit",
+        "hook": "Perfekt für deinen täglichen Weg zur Arbeit.",
+        "cta": "Entdecke die Details des ROAM 350.",
+        "claim_ids": [
+          "capacity",
+          "lid",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "文案采用清晰自然的德语，针对城市通勤人群，强调350ml容量、旋盖设计、不锈钢材质及可重复使用的特点，符合德国市场对实用性和环保的关注。视觉描述使用中文以符合内部沟通习惯，但所有面向用户的文本均为德语。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "commute",
+            "visual": "平面杯形与旋盖示意，抽象城市通勤背景，轻推近镜头展示杯身。",
+            "voiceover": "Perfekt für deinen täglichen Weg zur Arbeit.",
+            "on_screen": "ROAM 350 – Dein Begleiter"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-hero",
+            "visual": "平面杯形特写，展示350ml容量标识与旋盖细节，字幕叠加。",
+            "voiceover": "350 Milliliter Fassungsvermögen mit sicherem Schraubverschluss.",
+            "on_screen": "350 ml | Schraubverschluss"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-hero",
+            "visual": "杯身材质示意，强调不锈钢质感，轻推近镜头。",
+            "voiceover": "Hergestellt aus robustem Edelstahl für langlebige Nutzung.",
+            "on_screen": "Edelstahl-Körper"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "commute",
+            "visual": "杯形与通勤场景结合，展示重复使用概念，字幕引导行动。",
+            "voiceover": "Wiederverwendbar und ideal für den Alltag. Entdecke die Details.",
+            "on_screen": "Wiederverwendbar | Entdecke mehr"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "文案德语自然流畅，精准匹配城市通勤场景与产品档案事实（350ml、旋盖、不锈钢、可重复使用）。所有视觉描述均明确基于合成矢量素材，未虚构实拍或动作，且未包含任何禁止的性能承诺。时长控制在20秒内，符合演示规范。"
+      }
+    },
+    "DE-2": {
+      "task_hash": "f757a555c792447724282f4d6b3dbca6e6dc442b289bb8351c70b9342a042f3c",
+      "status": "approved",
+      "script": {
+        "task_id": "DE-2",
+        "language": "de-DE",
+        "title": "Ihr täglicher Begleiter am Schreibtisch",
+        "hook": "Wiederholen Sie den nachhaltigen Moment.",
+        "cta": "Entdecken Sie die Details.",
+        "claim_ids": [
+          "reuse",
+          "lid",
+          "material",
+          "capacity"
+        ],
+        "localization_rationale": "德语-Text ist natürlich und direkt, passend für das deutsche Publikum. Der Fokus liegt auf Nachhaltigkeit und Wiederverwendung im Büroalltag, ohne übertriebene Versprechen.",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "desk",
+            "visual": "Statische Nahaufnahme der synthetischen SVG-Desk-Szene mit dem Cup im Fokus, leichtes Zoom-In auf den Becher.",
+            "voiceover": "Am Schreibtisch beginnt der nachhaltige Tag.",
+            "on_screen": "Wiederverwendbar"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-detail",
+            "visual": "Nahaufnahme der synthetischen SVG-Cup-Details, Fokus auf den Schraubverschluss.",
+            "voiceover": "Der stabile Schraubverschluss für Ihren Alltag.",
+            "on_screen": "Schraubverschluss"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-detail",
+            "visual": "Leichte Kamerafahrt über die synthetische Darstellung des Edelstahlkörpers.",
+            "voiceover": "Hergestellt aus robustem Edelstahl.",
+            "on_screen": "Edelstahl"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "desk",
+            "visual": "Rückkehr zur Desk-Szene, Cup steht bereit, Text '350 ml' erscheint.",
+            "voiceover": "350 Milliliter für Ihre täglichen Bedürfnisse.",
+            "on_screen": "350 ml"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "该方案完全符合要求：德语脚本自然流畅，精准匹配“办公重复使用”的受众角度。所有声画内容（容量、材质、杯盖）均严格基于产品档案事实，未出现任何禁止的性能承诺（如保温时长、防漏认证）。视觉描述明确标注为合成矢量图，未冒充实拍，且单句旁白均控制在55词以内。CTA合规，无虚构折扣。"
+      }
+    },
+    "US-1": {
+      "task_hash": "120b917ad9fbc5665615cfd0e8a86db4e9a0bfd7cd3f246866781717e98f8b8f",
+      "status": "approved",
+      "script": {
+        "task_id": "US-1",
+        "language": "en-US",
+        "title": "Lightweight Prep for Your Weekend",
+        "hook": "Ready for your weekend escape?",
+        "cta": "Explore product details",
+        "claim_ids": [
+          "capacity",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "使用自然美式英语，以“周末出行准备”为切入点，强调350ml容量、不锈钢材质和可重复使用特性，避免虚构保温时长或防漏效果，符合演示素材的静态矢量图限制。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "cup-hero",
+            "visual": "静态矢量图：平面杯形与旋盖示意，抽象背景，轻推近镜头展示杯身轮廓",
+            "voiceover": "Ready for your weekend escape? Start light.",
+            "on_screen": "Lightweight Prep"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-hero",
+            "visual": "静态矢量图：聚焦杯身，叠加文字标注350ml容量",
+            "voiceover": "This 350ml stainless steel cup fits your gear.",
+            "on_screen": "350 ml capacity"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "trail",
+            "visual": "静态矢量图：杯形与抽象路径背景，轻推近展示旋盖细节",
+            "voiceover": "Durable stainless steel, built for reuse.",
+            "on_screen": "Reusable cup"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "cup-hero",
+            "visual": "静态矢量图：杯身居中，背景简洁，叠加CTA文字",
+            "voiceover": "Pack smart. Explore product details now.",
+            "on_screen": "Explore product details"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "脚本语言自然流畅，符合美式英语习惯。内容紧扣“周末轻装出行”角度，仅陈述350ml容量、不锈钢材质和可重复使用等已知事实，未涉及保温时长或防漏等禁止性虚构声明。视觉描述严格基于提供的静态矢量素材，未错误暗示实拍动作。时长控制在20秒内，符合所有演示规范。"
+      }
+    },
+    "US-2": {
+      "task_hash": "9096e85bf11ce257acbc151daadccecf8627916eb9218fe42aed06d8168092ca",
+      "status": "approved",
+      "script": {
+        "task_id": "US-2",
+        "language": "en-US",
+        "title": "Short Break Companion",
+        "hook": "Perfect for your short outdoor breaks.",
+        "cta": "Explore product details",
+        "claim_ids": [
+          "capacity",
+          "lid",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "针对美国市场周末短途出行人群，采用自然美式英语，聚焦“短途休息”场景，强调旋盖便利与不锈钢材质，避免虚构保温时长与防漏认证，符合演示素材限制。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "road",
+            "visual": "Synthetic vector still of a road scene with abstract background and English scene labels; static composition with slight digital zoom-in effect.",
+            "voiceover": "Taking a short break on the road?",
+            "on_screen": "Short Breaks"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-detail",
+            "visual": "Synthetic vector still of the cup and screw-top lid; static composition with subtle pan to highlight the lid mechanism.",
+            "voiceover": "Meet the ROAM 350 with a secure screw-top lid.",
+            "on_screen": "Screw-top lid"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-detail",
+            "visual": "Synthetic vector still focusing on the stainless steel body; static composition with text overlay highlighting material.",
+            "voiceover": "Made of stainless steel, it's a reusable cup.",
+            "on_screen": "Stainless steel body"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "road",
+            "visual": "Synthetic vector still of the road scene returning; static composition with final call-to-action text overlay.",
+            "voiceover": "350 ml capacity. Explore product details.",
+            "on_screen": "350 ml capacity"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "该方案完全符合演示素材限制，所有口播与字幕均严格基于已知产品属性（350ml、旋盖、不锈钢、可重复使用），未出现任何虚构的保温时长或防漏承诺。视觉描述准确界定了合成矢量图的静态属性，未误导为实拍。文案自然流畅，精准匹配“短途休息”场景与美式英语风格，时长控制在20秒内，无违规项。"
+      }
+    }
+  },
+  "spent": 55,
+  "elapsed_minutes": 505,
+  "plan_version": 1,
+  "disclaimer": "Synthetic product/market/media; plan delivery only, no rendered video; model review is not human market validation."
+}

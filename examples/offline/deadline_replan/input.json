@@ -1,0 +1,11 @@
+{
+  "budget_units": 100,
+  "deadline_hours": 5.0,
+  "markets": {
+    "DE": 2,
+    "US": 2
+  },
+  "max_calls": 40,
+  "product_id": "travel-cup",
+  "theme": "便携杯多语言推广：快速交付"
+}
