@@ -515,6 +515,7 @@
     "name": "save_campaign"
   },
   "elapsed_minutes": 630,
+  "failures": {},
   "feedback": {},
   "last_result": {
     "ok": true,

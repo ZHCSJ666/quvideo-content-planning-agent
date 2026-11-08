@@ -136,7 +136,8 @@ class ToolRunner:
                     state["attempts"][key] = n
                     if (state["scenario"] == "script_once" and key == "DE-2" and n == 1) or (state["scenario"] == "persistent_failure" and key == "DE-2"):
                         cost, minutes = self.rules["failure_cost"], self.rules["failure_minutes"]
-                        raise ToolError("SERVICE_UNAVAILABLE", "Script service unavailable; result not created", details={"retryable": state["scenario"] != "persistent_failure", "task_id": key})
+                        retryable = state["scenario"] != "persistent_failure"
+                        raise ToolError("SERVICE_UNAVAILABLE", "Script service unavailable; result not created", details={"retryable": retryable, "task_id": key, "attempt": n, "max_attempts": self.rules["max_generation_attempts_per_task"], "recovery": "Bounded retry after checking remaining budget/time" if retryable else "Service reports ongoing unavailability for this task across tiers; no configured fallback. Repair service, then explicitly resume the same task."})
                     self.check_assets(state, task)
                     script = Script.model_validate(self.provider.generate(task, state))
                     if state["scenario"] == "quality_once" and key == "DE-2" and n == 1:
@@ -172,6 +173,13 @@ class ToolRunner:
             if name == "save_campaign":
                 state["saved"], state["status"], state["reason"] = None, "running", ""
                 cost = minutes = 0
+        if name == "generate_script" and args.get("task_id") in {t["id"] for t in state["plan"]}:
+            task_id = args["task_id"]
+            failures = state.setdefault("failures", {})
+            if result.get("ok"):
+                failures.pop(task_id, None)
+            elif result.get("code") in {"SERVICE_UNAVAILABLE", "TOOL_ERROR", "INVALID_RESULT", "ATTEMPTS_EXHAUSTED", "ASSET_UNAVAILABLE"}:
+                failures[task_id] = {"tool": name, "task_id": task_id, "step": state["calls"], "code": result["code"], "message": result.get("message", ""), "retryable": result.get("retryable", True), "attempts": state["attempts"].get(task_id, 0), "recovery": result.get("recovery", "Inspect the error and remaining attempt/resource limits before recovery")}
         state["spent"] += cost
         state["elapsed_minutes"] += minutes
         event = {"step": state["calls"], "kind": "tool", "tool": name, "arguments": args,
@@ -336,6 +344,8 @@ class ToolRunner:
         state["status"] = "incomplete"
         gap = estimate(state) if state["plan"] else None
         approved = [t["id"] for t in state["plan"] if current_artifact(state, t) and current_artifact(state, t)["status"] == "approved"]
+        blockers = [copy.deepcopy(f) for tid, f in state.get("failures", {}).items() if tid not in approved]
+        terminal_failures = [f for f in blockers if f.get("retryable") is False]
         preserved = "、".join(approved) or "无"
         # Model chooses to stop; code reports authoritative financial/status facts.
         # Raw model suggestions remain in Trace, never become an unverified quotation.
@@ -343,9 +353,12 @@ class ToolRunner:
             detail = f"已支出 {state['spent']}；最低完成预计总费用 {gap['minimum_projected_total']}，预算 {state['brief']['budget_units']}，缺口 {gap['minimum_budget_gap']}。需用户明确调整预算或范围后恢复。"
         elif gap and gap["minimum_finish_minutes"] > int(state["brief"]["deadline_hours"] * 60):
             detail = f"最低完成预计需累计 {gap['minimum_finish_minutes']} 分钟，超过截止时间 {state['brief']['deadline_hours']} 小时。需用户明确调整期限或范围后恢复。"
+        elif terminal_failures:
+            affected = "、".join(f"{f['task_id']}（{f['code']}，已尝试 {f['attempts']} 次）" for f in terminal_failures)
+            detail = f"工具明确报告不可继续重试：{affected}。已支出 {state['spent']}，预算 {state['brief']['budget_units']}。修复对应服务或错误后，显式恢复同一任务；费用和有效成果不清零。"
         elif any(n >= self.rules["max_generation_attempts_per_task"] for n in state["attempts"].values()):
             detail = "存在已达到生成尝试上限的任务；修复服务或内容问题后可显式恢复。累计费用与有效成果保留。"
         else:
             detail = "模型选择停止；当前工具结果未证明存在可完成路径。具体阻碍与模型建议见 Trace，建议中的报价须重新估算确认。"
         state["reason"] = f"未完成。已审核并保留：{preserved}。{detail}"
-        return {"ok": True, "status": "incomplete", "reason": state["reason"], "gap": gap, "approved_tasks": approved}
+        return {"ok": True, "status": "incomplete", "reason": state["reason"], "gap": gap, "approved_tasks": approved, "blockers": blockers}

@@ -35,6 +35,7 @@ Product strategies and angles must use ONLY verified product facts. Do not infer
 Prefer expressive production when feasible, but always call estimate_cost after creating/revising a plan and before generation. Observe the quote before choosing to proceed or change tiers/assets. Costs already spent are sunk; changing plans does not refund them. Do not silently reduce requested video counts, markets, quality gates, or extend deadline/budget.
 Tool failures and rejected content are observations: correct arguments, retry bounded transient failure, choose available alternatives, change only affected tasks, or stop with an explicit blocker. Preserve EXACT fields of completed tasks when revising a full plan, so valid work remains reusable. A quote is not an execution charge.
 Generation attempts are counted per task ID across ALL plan versions. Changing tier, strategy, assets or other plan fields NEVER resets attempts. ATTEMPTS_EXHAUSTED is non-retryable within this run: stop and request explicit operator resume after repair. Do not try plan edits to bypass this boundary. The attempts field in state is authoritative.
+Unresolved generation failures are retained in failures even after a quote or plan revision. retryable=false for SERVICE_UNAVAILABLE means the service reports an ongoing blocker for that task across all offered tiers; no alternative provider is configured. If a required task is blocked this way, preserve completed work and stop, explaining the repair/resume condition. A budget-feasible quote does not establish service availability. For retryable failures, assess remaining resources and attempt counts before choosing a bounded retry or another valid recovery.
 Generated content must pass review_content. If rejected, generate_script again repairs it using review issues. Approved tasks should not be regenerated. Only save_campaign can declare success after all requested tasks are approved. Save failure does not erase content; retry saving within bounds. If no feasible path remains, stop and explain gaps and recovery conditions. You cannot promise success when services remain unavailable. Max generation attempts per task is 3; tool calls are capped separately.
 Use available tool names and exact argument keys from their schemas. Do not guess assets; choose returned asset IDs. Do not end with free text: call save_campaign or stop.
 """
@@ -43,6 +44,7 @@ Use available tool names and exact argument keys from their schemas. Do not gues
 def public_state(state):
     keys = ("brief", "context", "catalog", "searches", "plan", "plan_version", "quote", "spent", "elapsed_minutes", "calls", "attempts", "last_result")
     view = {k: state[k] for k in keys}
+    view["failures"] = state.get("failures", {})
     def summary(result):
         if not result:
             return result
@@ -64,10 +66,11 @@ class LiveProvider:
         base, key, model = config()
         self.label = f"live:{model}"
         extra = {"chat_template_kwargs": {"enable_thinking": False}} if os.getenv("CONTENT_VLLM_DISABLE_THINKING") == "1" else None
+        timeout = float(os.getenv("CONTENT_API_TIMEOUT", "90"))
         self.model = ChatOpenAI(model=model, api_key=key, base_url=base, temperature=0.2,
-                               timeout=float(os.getenv("CONTENT_API_TIMEOUT", "90")), max_retries=0,
+                               timeout=timeout, max_retries=0,
                                max_tokens=6000, extra_body=extra)
-        self.info = {"model": model, "temperature": 0.2, "max_tokens": 6000, "vllm_disable_thinking": extra is not None, "sdk_retries": 0}
+        self.info = {"model": model, "temperature": 0.2, "max_tokens": 6000, "vllm_disable_thinking": extra is not None, "sdk_retries": 0, "timeout_seconds": timeout}
 
     def record(self, state, message):
         state["model_calls"] += 1

@@ -86,7 +86,7 @@ def initial_state(brief: Brief, task_id: str, mode: str, scenario: str) -> dict:
         "task_id": task_id, "brief": brief.model_dump(), "mode": mode,
         "scenario": scenario, "status": "running", "reason": "", "context": None,
         "catalog": [], "searches": [], "plan": [], "plan_version": 0,
-        "artifacts": {}, "feedback": {}, "quote": None, "spent": 0, "elapsed_minutes": 0,
+        "artifacts": {}, "feedback": {}, "failures": {}, "quote": None, "spent": 0, "elapsed_minutes": 0,
         "calls": 0, "model_calls": 0, "model_usage": {}, "attempts": {},
         "trace": [], "last_result": None, "decision": None,
         "saved": None, "resume_count": 0,

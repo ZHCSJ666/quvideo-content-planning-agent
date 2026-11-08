@@ -323,6 +323,7 @@
     "name": "revise_plan"
   },
   "elapsed_minutes": 4,
+  "failures": {},
   "feedback": {},
   "last_result": {
     "invalidated": [],

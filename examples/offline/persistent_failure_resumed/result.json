@@ -515,6 +515,7 @@
     "name": "save_campaign"
   },
   "elapsed_minutes": 535,
+  "failures": {},
   "feedback": {},
   "last_result": {
     "ok": true,
@@ -1554,9 +1555,12 @@
       "minutes": 10,
       "plan_version": 2,
       "result": {
+        "attempt": 1,
         "code": "SERVICE_UNAVAILABLE",
+        "max_attempts": 3,
         "message": "Script service unavailable; result not created",
         "ok": false,
+        "recovery": "Service reports ongoing unavailability for this task across tiers; no configured fallback. Repair service, then explicitly resume the same task.",
         "retryable": false,
         "task_id": "DE-2"
       },
@@ -1583,9 +1587,12 @@
       "minutes": 10,
       "plan_version": 2,
       "result": {
+        "attempt": 2,
         "code": "SERVICE_UNAVAILABLE",
+        "max_attempts": 3,
         "message": "Script service unavailable; result not created",
         "ok": false,
+        "recovery": "Service reports ongoing unavailability for this task across tiers; no configured fallback. Repair service, then explicitly resume the same task.",
         "retryable": false,
         "task_id": "DE-2"
       },
@@ -1612,9 +1619,12 @@
       "minutes": 10,
       "plan_version": 2,
       "result": {
+        "attempt": 3,
         "code": "SERVICE_UNAVAILABLE",
+        "max_attempts": 3,
         "message": "Script service unavailable; result not created",
         "ok": false,
+        "recovery": "Service reports ongoing unavailability for this task across tiers; no configured fallback. Repair service, then explicitly resume the same task.",
         "retryable": false,
         "task_id": "DE-2"
       },
@@ -1642,6 +1652,18 @@
       "result": {
         "approved_tasks": [
           "DE-1"
+        ],
+        "blockers": [
+          {
+            "attempts": 3,
+            "code": "SERVICE_UNAVAILABLE",
+            "message": "Script service unavailable; result not created",
+            "recovery": "Service reports ongoing unavailability for this task across tiers; no configured fallback. Repair service, then explicitly resume the same task.",
+            "retryable": false,
+            "step": 12,
+            "task_id": "DE-2",
+            "tool": "generate_script"
+          }
         ],
         "gap": {
           "alternatives": {
@@ -1698,7 +1720,7 @@
           "time_gap_minutes": 0
         },
         "ok": true,
-        "reason": "未完成。已审核并保留：DE-1。存在已达到生成尝试上限的任务；修复服务或内容问题后可显式恢复。累计费用与有效成果保留。",
+        "reason": "未完成。已审核并保留：DE-1。工具明确报告不可继续重试：DE-2（SERVICE_UNAVAILABLE，已尝试 3 次）。已支出 21，预算 100。修复对应服务或错误后，显式恢复同一任务；费用和有效成果不清零。",
         "status": "incomplete"
       },
       "step": 13,

@@ -17,6 +17,7 @@
   "context": null,
   "decision": null,
   "elapsed_minutes": 0,
+  "failures": {},
   "feedback": {},
   "last_result": null,
   "mode": "offline",

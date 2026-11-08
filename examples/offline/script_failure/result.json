@@ -515,6 +515,7 @@
     "name": "save_campaign"
   },
   "elapsed_minutes": 515,
+  "failures": {},
   "feedback": {},
   "last_result": {
     "ok": true,
@@ -1554,9 +1555,12 @@
       "minutes": 10,
       "plan_version": 2,
       "result": {
+        "attempt": 1,
         "code": "SERVICE_UNAVAILABLE",
+        "max_attempts": 3,
         "message": "Script service unavailable; result not created",
         "ok": false,
+        "recovery": "Bounded retry after checking remaining budget/time",
         "retryable": true,
         "task_id": "DE-2"
       },

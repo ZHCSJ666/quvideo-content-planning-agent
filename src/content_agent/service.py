@@ -61,6 +61,7 @@ class Service:
             if repair:
                 state["scenario"] = "normal"
                 state["attempts"] = {k: v for k, v in state["attempts"].items() if state["artifacts"].get(k, {}).get("status") == "approved"}
+                state["failures"] = {}
             was_waiting = state["status"] == "waiting_input"
             state["status"], state["reason"], state["quote"] = "running", "", None
             self.store.save(state)

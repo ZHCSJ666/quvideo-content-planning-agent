@@ -273,9 +273,11 @@
     "name": "stop"
   },
   "elapsed_minutes": 4,
+  "failures": {},
   "feedback": {},
   "last_result": {
     "approved_tasks": [],
+    "blockers": [],
     "gap": {
       "alternatives": {
         "economy": {
@@ -1055,6 +1057,7 @@
       "plan_version": 1,
       "result": {
         "approved_tasks": [],
+        "blockers": [],
         "gap": {
           "alternatives": {
             "economy": {

@@ -93,6 +93,22 @@ def test_plan_changes_cannot_reset_exhausted_attempts(env):
     assert "scenario" not in visible
 
 
+def test_failure_memory_survives_planning_until_actual_recovery(env):
+    from content_agent.providers import public_state
+    env[3]["scenario"] = "script_once"
+    state = advance(env, lambda s: (s["last_result"] or {}).get("code") == "SERVICE_UNAVAILABLE")
+    failure = copy.deepcopy(state["failures"]["DE-2"])
+    plan = copy.deepcopy(state["plan"])
+    plan[1]["tier"] = "economy"
+    runner = env[2]
+    state = runner.execute(state, {"name": "revise_plan", "args": {"tasks": plan, "reason": "change pending tier"}})
+    state = runner.execute(state, {"name": "estimate_cost", "args": {"reason": "check new quote"}})
+    assert public_state(state)["failures"]["DE-2"] == failure
+    state = runner.execute(state, {"name": "generate_script", "args": {"task_id": "DE-2", "reason": "retry transient failure"}})
+    assert state["last_result"]["ok"]
+    assert "DE-2" not in state["failures"]
+
+
 def test_quality_failure_cannot_be_marked_success(env):
     env[3]["scenario"] = "quality_once"
     state = advance(env, lambda s: any(a["status"] == "rejected" for a in s["artifacts"].values()))
