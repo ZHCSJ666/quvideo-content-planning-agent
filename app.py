@@ -70,6 +70,8 @@ def render(state, source=None):
             mark = "通过" if outcome.get("ok") else "异常"
             if outcome.get("approved") is False:
                 mark = "质量未通过"
+            if event["tool"] == "stop" and outcome.get("status") == "incomplete":
+                mark = "主动停止 / 未完成"
             title = f"{event['step']:02d} · {LABELS.get(event['tool'], event['tool'])} · {mark} · +{event['cost']} 单位"
             with st.expander(title, expanded=not outcome.get("ok") or outcome.get("approved") is False):
                 st.write(event["decision_reason"])
@@ -149,7 +151,7 @@ try:
         st.caption("合成商品与市场资料 · 本地执行 · 不生成成片")
     state, source = None, None
     if page == "验收记录":
-        priority = {"normal": 0, "script-failure": 1, "budget-tight": 2, "missing-budget": 3}
+        priority = {"autonomous-transient": 0, "autonomous-persistent": 1, "normal": 2, "script-failure": 3, "budget-tight": 4, "missing-budget": 5}
         paths = sorted((ROOT / "examples" / "live").glob("*/result.json"), key=lambda p: (priority.get(p.parent.name, 9), p.parent.name)) + sorted((ROOT / "examples" / "offline").glob("*/result.json"))
         if paths:
             source = st.selectbox("选择实际运行记录", paths, format_func=lambda p: f"{p.parent.parent.name} / {p.parent.name}")

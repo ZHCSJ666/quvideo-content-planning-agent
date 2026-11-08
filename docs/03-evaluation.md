@@ -4,7 +4,7 @@
 
 ## 自动化验收
 
-- pytest：46 项，失败/错误 0 项；见 [文本结果](../examples/test-results.txt) 和 [JUnit XML](../examples/test-results.xml)。
+- pytest：53 项，失败/错误 0 项；见 [文本结果](../examples/test-results.txt) 和 [JUnit XML](../examples/test-results.xml)。
 - 离线验收：16/16 通过；见 [evaluation.json](../examples/offline/evaluation.json)。这些是 Mock 流程证据。
 
 ```bash
@@ -25,8 +25,44 @@ python scripts/build_evaluation_report.py
 | budget-tight | incomplete | 18 | 17 | 21 | 通过 |
 | missing-budget | waiting_input | — | — | 0 | 通过 |
 | duplicate | 重复提交返回原结果 | 0 | 0 | — | 通过 |
+| autonomous-transient | completed | 70 | 21 | 31 | 通过 |
+| autonomous-persistent | incomplete | 17 | 9 | 11 | 通过 |
 
 模型调用列统计收到响应的请求，超时未返回的不包含在此计数和 token 汇总中。
+
+两条从头执行、无需人工干预的真实模型故障路径已单独验收，见 [自主异常处理报告](07-autonomous-failure-paths.md)。临时失败要求完整交付；持续不可用要求模型主动调用 stop、保留成功成果并说明阻塞，不能靠调用上限结束。故障由本地工具注入，规划和恢复动作由真实模型选择。
+
+```bash
+CONTENT_API_TIMEOUT=120 python scripts/run_autonomous_acceptance.py --batch your-unique-batch
+python scripts/audit_evidence.py
+python scripts/build_autonomy_report.py
+```
+
+### autonomous-transient
+
+[输入](../examples/live/autonomous-transient/input.json) · [实际结果](../examples/live/autonomous-transient/result.json) · [Trace](../examples/live/autonomous-transient/trace.jsonl)
+
+实际工具决策模型：live:vllm/Qwen/Qwen3.5-27B。
+从全新任务连续运行，人工续跑 0 次；自主验收 18/18 项通过。[断言](../examples/live/autonomous-transient/audit.json) · [固定模型/源码配置](../examples/live/autonomous-transient/manifest.json) · [故障发生时的成功成果快照](../examples/live/autonomous-transient/before-failure.json)。
+[已保存方案](../examples/live/autonomous-transient/campaign.md)
+
+步骤 8 注入服务失败，计费 2、耗时 10 分钟；错误明确返回给模型。
+失败前已审核且之后未重新生成的任务：DE-1。
+
+步骤 11 的 DE-2 未通过内容审核。后续修复依据及原始问题均保留在 Trace 中。
+
+步骤 12 修改计划时保留：DE-1；使依赖产物失效：DE-2。
+
+### autonomous-persistent
+
+[输入](../examples/live/autonomous-persistent/input.json) · [实际结果](../examples/live/autonomous-persistent/result.json) · [Trace](../examples/live/autonomous-persistent/trace.jsonl)
+
+实际工具决策模型：live:vllm/Qwen/Qwen3.5-27B。
+从全新任务连续运行，人工续跑 0 次；自主验收 19/19 项通过。[断言](../examples/live/autonomous-persistent/audit.json) · [固定模型/源码配置](../examples/live/autonomous-persistent/manifest.json) · [故障发生时的成功成果快照](../examples/live/autonomous-persistent/before-failure.json)。
+最终状态为 `incomplete`，没有完整方案保存成功。原因：未完成。已审核并保留：DE-1。工具明确报告不可继续重试：DE-2（SERVICE_UNAVAILABLE，已尝试 1 次）。已支出 17，预算 100。修复对应服务或错误后，显式恢复同一任务；费用和有效成果不清零。
+
+步骤 8 注入服务失败，计费 2、耗时 10 分钟；错误明确返回给模型。
+失败前已审核且之后未重新生成的任务：DE-1。
 
 ### normal
 
@@ -100,9 +136,9 @@ python scripts/build_evaluation_report.py
 最终状态为 `waiting_input`，没有完整方案保存成功。原因：Missing required constraints: budget_units
 这是程序在模型调用前暂停的证据，不计入两条真实模型决策路径。
 
-另经 `python scripts/audit_evidence.py` 检查 19 份归档：Trace 与状态一致，步骤连续，账本可核对，完整交付满足结构约束。见 [审计结果](../examples/evidence-audit.json)。这不等于自然语言或营销效果验证。
+另经 `python scripts/audit_evidence.py` 检查 21 份归档：Trace 与状态一致，步骤连续，账本可核对，完整交付满足结构约束。见 [审计结果](../examples/evidence-audit.json)。这不等于自然语言或营销效果验证。
 
-最终 4 份真实模式归档已通过 Streamlit AppTest 展示检查，查看归档不调用模型。见 [界面检查](../examples/ui-archive-check.json)。
+最终 6 份真实模式归档已通过 Streamlit AppTest 展示检查，查看归档不调用模型。见 [界面检查](../examples/ui-archive-check.json)。
 
 ## 验收点映射
 
@@ -110,7 +146,7 @@ python scripts/build_evaluation_report.py
 | --- | --- |
 | 正常完成 | live/normal；offline/normal |
 | 缺预算 / 截止时间 | live/missing-budget；offline/missing_budget、missing_deadline；各自 resumed 记录 |
-| 工具失败与保留成功步骤 | live/script-failure；offline/script_failure、persistent_failure |
+| 工具失败与保留成功步骤 | live/autonomous-transient、autonomous-persistent；offline/script_failure、persistent_failure |
 | 预算超限与无可行方案 | live/budget-tight；offline/budget_replan、budget_impossible |
 | 重复执行 | live/evaluation.json duplicate；test_duplicate_run_does_not_repeat_execution |
 | 失败续跑（加分项） | offline/persistent_failure_resumed；test_state_survives_new_service_instance；界面恢复测试 |

@@ -1,24 +1,24 @@
 {
-  "method": "Streamlit AppTest; no screenshot/browser visual validation",
+  "method": "Streamlit AppTest with model initialization, task execution and resume disabled; no screenshot/browser visual validation",
   "results": [
     {
-      "case": "normal",
+      "case": "autonomous-persistent",
       "rendered_without_api": true,
       "metrics": [
-        "4 / 4",
-        "68 / 100",
-        "10.5 h",
-        "18 / 40"
+        "1 / 4",
+        "17 / 100",
+        "2.3 h",
+        "9 / 40"
       ]
     },
     {
-      "case": "script-failure",
+      "case": "autonomous-transient",
       "rendered_without_api": true,
       "metrics": [
         "4 / 4",
-        "91 / 100",
-        "13.7 h",
-        "36 / 41"
+        "70 / 100",
+        "10.7 h",
+        "21 / 40"
       ]
     },
     {
@@ -39,6 +39,26 @@
         "0 / 待补",
         "0.0 h",
         "0 / 40"
+      ]
+    },
+    {
+      "case": "normal",
+      "rendered_without_api": true,
+      "metrics": [
+        "4 / 4",
+        "68 / 100",
+        "10.5 h",
+        "18 / 40"
+      ]
+    },
+    {
+      "case": "script-failure",
+      "rendered_without_api": true,
+      "metrics": [
+        "4 / 4",
+        "91 / 100",
+        "13.7 h",
+        "36 / 41"
       ]
     }
   ]

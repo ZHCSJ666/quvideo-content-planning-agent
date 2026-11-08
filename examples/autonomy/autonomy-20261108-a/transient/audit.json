@@ -1,0 +1,146 @@
+{
+  "passed": true,
+  "checks": {
+    "live_model_decisions": true,
+    "fixed_model_configuration": true,
+    "no_human_resume_or_interruption": true,
+    "no_runtime_error_or_limit_fallback": true,
+    "constraints_unchanged": true,
+    "fault_observed": true,
+    "prior_success_preserved": true,
+    "ledger_balanced": true,
+    "within_budget_deadline": true,
+    "bounded_attempts_and_calls": true,
+    "trace_continuous": true,
+    "model_responded_to_fault": true,
+    "transient_fault_contract": true,
+    "failed_task_recovered": true,
+    "complete_reviewed_delivery": true,
+    "terminal_save_selected": true,
+    "source_unchanged": true,
+    "export_matches_state": true
+  },
+  "preserved_tasks": [
+    "DE-1"
+  ],
+  "fault_step": 8,
+  "actions_after_fault": [
+    {
+      "step": 9,
+      "tool": "estimate_cost",
+      "task_id": null,
+      "reason": "DE-2脚本生成失败（SERVICE_UNAVAILABLE），需检查剩余预算和时间是否支持重试。当前已花费17单位，剩余83单位；DE-1已完成，DE-2、US-1、US-2待处理。需确认是否仍有足够资源进行重试或调整策略。",
+      "ok": true,
+      "code": null,
+      "cost": 0
+    },
+    {
+      "step": 10,
+      "tool": "generate_script",
+      "task_id": "DE-2",
+      "reason": "DE-2脚本生成失败（SERVICE_UNAVAILABLE），但estimate_cost显示预算和时间充足（剩余40单位成本，376分钟），且失败可重试。按顺序重试DE-2脚本生成，策略聚焦不锈钢材质与可重复使用特性，使用desk和cup-detail素材，仅陈述已验证事实。",
+      "ok": true,
+      "code": null,
+      "cost": 12
+    },
+    {
+      "step": 11,
+      "tool": "review_content",
+      "task_id": "DE-2",
+      "reason": "DE-2脚本已生成，需审核其是否符合事实约束、语言规范和市场适配要求。检查是否仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用等已知事实，未出现防漏、耐用、轻便等禁止声明。",
+      "ok": true,
+      "code": null,
+      "cost": 1
+    },
+    {
+      "step": 12,
+      "tool": "revise_plan",
+      "task_id": null,
+      "reason": "DE-2任务因策略中包含“环保使用习惯”等违规推断被拒，需修正策略仅陈述已知事实（350ml容量、不锈钢杯身、旋盖、可重复使用），删除所有环保、耐用或长期可靠等未证实承诺，确保符合产品档案约束。",
+      "ok": true,
+      "code": null,
+      "cost": 0
+    },
+    {
+      "step": 13,
+      "tool": "generate_script",
+      "task_id": "DE-2",
+      "reason": "DE-2任务策略已修正，删除了“环保使用习惯”等违规推断，仅保留350ml容量、不锈钢杯身、旋盖及可重复使用四项已知事实。现重新生成脚本，确保内容严格符合产品档案约束，避免任何未证实承诺。",
+      "ok": false,
+      "code": "ESTIMATE_REQUIRED",
+      "cost": 0
+    },
+    {
+      "step": 14,
+      "tool": "estimate_cost",
+      "task_id": null,
+      "reason": "DE-2任务策略已修正，需重新生成脚本。在生成前必须获取当前计划的费用估算，确认剩余预算是否支持后续生成与审核流程，避免超出100预算单位或48小时时限。",
+      "ok": true,
+      "code": null,
+      "cost": 0
+    },
+    {
+      "step": 15,
+      "tool": "generate_script",
+      "task_id": "DE-2",
+      "reason": "DE-2任务策略已修正，删除了违规推断，仅保留已知事实。当前估算显示预算可行（剩余40单位），需生成脚本以推进审核流程。",
+      "ok": true,
+      "code": null,
+      "cost": 12
+    },
+    {
+      "step": 16,
+      "tool": "review_content",
+      "task_id": "DE-2",
+      "reason": "DE-2脚本已生成，需审核其是否严格遵循产品事实（350ml容量、不锈钢杯身、旋盖、可重复使用），未包含任何禁止声明（如防漏、耐用、环保等），并符合德语市场风格与20秒时长要求。",
+      "ok": true,
+      "code": null,
+      "cost": 1
+    },
+    {
+      "step": 17,
+      "tool": "generate_script",
+      "task_id": "US-1",
+      "reason": "DE-1和DE-2已审核通过，当前需推进US-1任务。根据估算，剩余预算40单位，时间充足，且US-1策略仅陈述已知事实（350ml容量、不锈钢杯身、旋盖、可重复使用），无违规推断，符合生成条件。",
+      "ok": true,
+      "code": null,
+      "cost": 12
+    },
+    {
+      "step": 18,
+      "tool": "review_content",
+      "task_id": "US-1",
+      "reason": "US-1脚本已生成，需审核其是否严格遵循产品事实（350ml容量、不锈钢杯身、旋盖、可重复使用），未包含任何禁止声明（如防漏、耐用、环保等），并符合美式英语市场风格与20秒时长要求。",
+      "ok": true,
+      "code": null,
+      "cost": 1
+    },
+    {
+      "step": 19,
+      "tool": "generate_script",
+      "task_id": "US-2",
+      "reason": "US-2任务尚未生成脚本，当前预算充足（剩余40单位），时间充裕，且策略仅陈述已知事实（350ml容量、不锈钢杯身、旋盖、可重复使用），无违规推断，符合生成条件。",
+      "ok": true,
+      "code": null,
+      "cost": 12
+    },
+    {
+      "step": 20,
+      "tool": "review_content",
+      "task_id": "US-2",
+      "reason": "US-2脚本已生成，需审核其是否严格遵循产品事实（350ml容量、不锈钢杯身、旋盖、可重复使用），未包含任何禁止声明（如防漏、耐用、环保等），并符合美式英语市场风格与20秒时长要求。",
+      "ok": true,
+      "code": null,
+      "cost": 1
+    },
+    {
+      "step": 21,
+      "tool": "save_campaign",
+      "task_id": null,
+      "reason": "所有四个任务（DE-1、DE-2、US-1、US-2）均已通过审核，脚本严格遵循产品事实，未包含任何禁止声明，符合市场风格与时长要求。预算和时间均在允许范围内，满足保存条件。",
+      "ok": true,
+      "code": null,
+      "cost": 1
+    }
+  ]
+}

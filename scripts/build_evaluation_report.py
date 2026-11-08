@@ -16,7 +16,9 @@ def main():
     for result in live["results"]:
         lines.append(f"| {result['case']} | {result.get('status', '重复提交返回原结果')} | {result.get('spent', result.get('additional_cost', '—'))} | {result.get('calls', result.get('additional_calls', '—'))} | {result.get('model_calls', '—')} | {'通过' if result['passed'] else '未通过'} |")
     lines += ["", "模型调用列统计收到响应的请求，超时未返回的不包含在此计数和 token 汇总中。"]
-    for case in ("normal", "script-failure", "budget-tight", "missing-budget"):
+    if (ROOT / "examples/autonomy/latest.json").exists():
+        lines += ["", "两条从头执行、无需人工干预的真实模型故障路径已单独验收，见 [自主异常处理报告](07-autonomous-failure-paths.md)。临时失败要求完整交付；持续不可用要求模型主动调用 stop、保留成功成果并说明阻塞，不能靠调用上限结束。故障由本地工具注入，规划和恢复动作由真实模型选择。", "", "```bash", "CONTENT_API_TIMEOUT=120 python scripts/run_autonomous_acceptance.py --batch your-unique-batch", "python scripts/audit_evidence.py", "python scripts/build_autonomy_report.py", "```"]
+    for case in ("autonomous-transient", "autonomous-persistent", "normal", "script-failure", "budget-tight", "missing-budget"):
         p = ROOT / "examples/live" / case / "result.json"
         if not p.exists():
             continue
@@ -25,6 +27,9 @@ def main():
         actors = sorted({e["actor"] for e in state["trace"] if e.get("kind") == "tool"})
         if actors:
             lines.append("实际工具决策模型：" + "、".join(actors) + "。")
+        if case.startswith("autonomous-"):
+            autonomy = json.loads(p.with_name("audit.json").read_text())
+            lines.append(f"从全新任务连续运行，人工续跑 {state['resume_count']} 次；自主验收 {sum(autonomy['checks'].values())}/{len(autonomy['checks'])} 项通过。[断言](../examples/live/{case}/audit.json) · [固定模型/源码配置](../examples/live/{case}/manifest.json) · [故障发生时的成功成果快照](../examples/live/{case}/before-failure.json)。")
         if state["resume_count"]:
             lines.append(f"该任务包含 {state['resume_count']} 次明确的操作者恢复；这不是从头到尾无需干预的自动恢复记录。费用、原始异常与恢复事件连续保留。")
         interruptions = sum(e.get("kind") == "operator_interrupted" for e in state["trace"])
@@ -59,7 +64,7 @@ def main():
     if ui.exists():
         records = json.loads(ui.read_text())["results"]
         lines += ["", f"最终 {len(records)} 份真实模式归档已通过 Streamlit AppTest 展示检查，查看归档不调用模型。见 [界面检查](../examples/ui-archive-check.json)。"]
-    lines += ["", "## 验收点映射", "", "| 验收点 | 证据 |", "| --- | --- |", "| 正常完成 | live/normal；offline/normal |", "| 缺预算 / 截止时间 | live/missing-budget；offline/missing_budget、missing_deadline；各自 resumed 记录 |", "| 工具失败与保留成功步骤 | live/script-failure；offline/script_failure、persistent_failure |", "| 预算超限与无可行方案 | live/budget-tight；offline/budget_replan、budget_impossible |", "| 重复执行 | live/evaluation.json duplicate；test_duplicate_run_does_not_repeat_execution |", "| 失败续跑（加分项） | offline/persistent_failure_resumed；test_state_survives_new_service_instance；界面恢复测试 |", "| 资料不足 / 素材失效 | offline/asset_missing；exploratory 中空检索与不匹配素材的实际观察 |", "| 质量不合格 | live/normal；offline/quality_failure；exploratory 二次核查 |", "| 保存失败 | offline/save_failure；实际磁盘异常单元测试 |", "| 时间与调用上限 | offline/deadline_replan、step_limit；等待耗尽期限测试 |", "", "所有上述案例目录均包含实际 input.json、result.json、trace.jsonl；完成案例还包含 campaign.md/json。不同模式不能混算成模型成功率。", "", "## 失败、改进与验证边界", "", "- 早期并行探索存在检索标签不匹配、跨市场素材误用和实际模型审核超时，记录位于 `examples/exploratory/`。其中操作者中止的运行明确标记，不被统计为自动恢复成功。", "- 首次工程完成案例的二次核查发现轻量、耐用、环保和国家偏好推断漏检。原记录和 secondary-audit.json 保留，随后收紧事实规则与提示，并重新执行真实验收。二次核查由 Codex 完成，并非母语人工审稿。", "- 一条真实故障验收曾在触发预设故障前因重复质量拒绝而失败。重规划丢失审核意见的问题已修复，原运行保留在 `examples/history/`。", "- 紧预算案例在返工后无可行方案，如实未完成；这是停止边界通过验收，不等于四份内容成功交付。历史模型停止理由曾有忽略沉没费用的错误口算，原 Trace 保留；修复后显式恢复同一任务，程序账本生成最终费用与缺口说明。", "- 真实案例数量很小，只证明所列输入下的实际行为；不声称统计显著的成功率、真实转化提升或任意异常均可恢复。", "- 模型生成与语义审核使用同一模型，存在同源偏差；词表只覆盖已识别声明，不能保证任意措辞都被拦截。仍需母语运营和真实市场评估。", "- 素材为实际可读的合成 SVG；未验证真实视频渲染、配音时长、真实商品参数或商业投放。20 秒分镜和字数只是方案约束。", "- 本地账本与回执防重通过测试；网络超时后的实际模型计费、分布式工具 exactly-once 和真实第三方作业查询未实现。", "- Streamlit 通过 AppTest 归档展示、新建任务、失败恢复和零预算保留测试，以及 HTTP 健康检查；当前环境无用户浏览器控制工具，未声称完成截图级视觉验收。", "- GitHub URL、题号与最终远端 commit 仍需要实际提交信息；不能用本地代码替代已推送仓库。", ""]
+    lines += ["", "## 验收点映射", "", "| 验收点 | 证据 |", "| --- | --- |", "| 正常完成 | live/normal；offline/normal |", "| 缺预算 / 截止时间 | live/missing-budget；offline/missing_budget、missing_deadline；各自 resumed 记录 |", "| 工具失败与保留成功步骤 | live/autonomous-transient、autonomous-persistent；offline/script_failure、persistent_failure |", "| 预算超限与无可行方案 | live/budget-tight；offline/budget_replan、budget_impossible |", "| 重复执行 | live/evaluation.json duplicate；test_duplicate_run_does_not_repeat_execution |", "| 失败续跑（加分项） | offline/persistent_failure_resumed；test_state_survives_new_service_instance；界面恢复测试 |", "| 资料不足 / 素材失效 | offline/asset_missing；exploratory 中空检索与不匹配素材的实际观察 |", "| 质量不合格 | live/normal；offline/quality_failure；exploratory 二次核查 |", "| 保存失败 | offline/save_failure；实际磁盘异常单元测试 |", "| 时间与调用上限 | offline/deadline_replan、step_limit；等待耗尽期限测试 |", "", "所有上述案例目录均包含实际 input.json、result.json、trace.jsonl；完成案例还包含 campaign.md/json。不同模式不能混算成模型成功率。", "", "## 失败、改进与验证边界", "", "- 早期并行探索存在检索标签不匹配、跨市场素材误用和实际模型审核超时，记录位于 `examples/exploratory/`。其中操作者中止的运行明确标记，不被统计为自动恢复成功。", "- 首次工程完成案例的二次核查发现轻量、耐用、环保和国家偏好推断漏检。原记录和 secondary-audit.json 保留，随后收紧事实规则与提示，并重新执行真实验收。二次核查由 Codex 完成，并非母语人工审稿。", "- 一条真实故障验收曾在触发预设故障前因重复质量拒绝而失败。重规划丢失审核意见的问题已修复，原运行保留在 `examples/history/`。", "- 紧预算案例在返工后无可行方案，如实未完成；这是停止边界通过验收，不等于四份内容成功交付。历史模型停止理由曾有忽略沉没费用的错误口算，原 Trace 保留；修复后显式恢复同一任务，程序账本生成最终费用与缺口说明。", "- 真实案例数量很小，只证明所列输入下的实际行为；不声称统计显著的成功率、真实转化提升或任意异常均可恢复。", "- 模型生成与语义审核使用同一模型，存在同源偏差；词表只覆盖已识别声明，不能保证任意措辞都被拦截。仍需母语运营和真实市场评估。", "- 素材为实际可读的合成 SVG；未验证真实视频渲染、配音时长、真实商品参数或商业投放。20 秒分镜和字数只是方案约束。", "- 本地账本与回执防重通过测试；网络超时后的实际模型计费、分布式工具 exactly-once 和真实第三方作业查询未实现。", "- Streamlit 通过 AppTest 归档展示、新建任务、失败恢复和零预算保留测试，以及 HTTP 健康检查；当前环境无用户浏览器控制工具，未声称完成截图级视觉验收。", "- GitHub URL、题号与最终远端 commit 仍需要实际提交信息；不能用本地代码替代已推送仓库。", ""]
     (ROOT / "docs/03-evaluation.md").write_text("\n".join(lines))
 
 

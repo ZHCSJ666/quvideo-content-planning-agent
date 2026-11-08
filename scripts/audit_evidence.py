@@ -1,7 +1,9 @@
 """Independently check exported receipts, ledgers and delivered artifact contracts."""
 import json
+import hashlib
 
-from content_agent.domain import Brief, ROOT, Script, VideoTask, load_data, script_errors, validate_plan
+from content_agent.domain import Brief, ROOT, Script, VideoTask, canonical, load_data, script_errors, validate_plan
+from content_agent.evaluation import audit_autonomy
 
 
 def main():
@@ -35,8 +37,22 @@ def main():
             else:
                 assert state["saved"] is None, path
                 assert not path.with_name("campaign.json").exists(), path
+            if path.parent.name in {"autonomous-transient", "autonomous-persistent"}:
+                manifest = json.loads(path.with_name("manifest.json").read_text())
+                baseline = json.loads(path.with_name("before-failure.json").read_text())
+                scenario = "script_once" if path.parent.name == "autonomous-transient" else "persistent_failure"
+                checked = audit_autonomy(state, scenario, json.loads(path.with_name("input.json").read_text()), baseline, manifest["model_config"])
+                assert checked["passed"], (path, checked["checks"])
+                recorded = json.loads(path.with_name("audit.json").read_text())
+                assert recorded["passed"] and all(recorded["checks"].values()), path
+                assert all(recorded["checks"].get(key) == value for key, value in checked["checks"].items()), path
+                assert hashlib.sha256(canonical(manifest["source"]["files"]).encode()).hexdigest() == manifest["source"]["sha256"], path
+                for name, expected in manifest["source"]["files"].items():
+                    source = (ROOT / name).resolve()
+                    assert source.is_relative_to(ROOT), name
+                    assert hashlib.sha256(source.read_bytes()).hexdigest() == expected, (path, name)
             results.append({"case": str(path.parent.relative_to(ROOT / "examples")), "status": state["status"], "passed": True})
-    report = {"scope": "Export consistency, sequential receipts, simulated ledger, completed artifact contracts. Does not prove natural language quality or marketing performance.", "results": results}
+    report = {"scope": "Export consistency, sequential receipts, simulated ledger, completed artifact contracts. Autonomous cases also recheck fixed model/source, no manual intervention, preserved prior work, and model-selected termination. Does not prove natural language quality or marketing performance.", "results": results}
     (ROOT / "examples/evidence-audit.json").write_text(json.dumps(report, ensure_ascii=False, indent=2))
     print(f"{len(results)} exported cases passed ledger and artifact audit")
 

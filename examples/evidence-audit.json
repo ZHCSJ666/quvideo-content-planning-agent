@@ -1,6 +1,16 @@
 {
-  "scope": "Export consistency, sequential receipts, simulated ledger, completed artifact contracts. Does not prove natural language quality or marketing performance.",
+  "scope": "Export consistency, sequential receipts, simulated ledger, completed artifact contracts. Autonomous cases also recheck fixed model/source, no manual intervention, preserved prior work, and model-selected termination. Does not prove natural language quality or marketing performance.",
   "results": [
+    {
+      "case": "live/autonomous-persistent",
+      "status": "incomplete",
+      "passed": true
+    },
+    {
+      "case": "live/autonomous-transient",
+      "status": "completed",
+      "passed": true
+    },
     {
       "case": "live/budget-tight",
       "status": "incomplete",

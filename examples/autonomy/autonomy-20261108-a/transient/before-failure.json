@@ -1,0 +1,76 @@
+{
+  "DE-1": {
+    "task": {
+      "angle": "随身通勤的容量与使用场景",
+      "asset_ids": [
+        "commute",
+        "cup-hero"
+      ],
+      "audience": "城市通勤人群",
+      "id": "DE-1",
+      "market": "DE",
+      "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中杯子的便携性。使用commute和cup-hero素材，通过字幕强调容量与使用场景，避免虚构保温或防漏效果。",
+      "tier": "standard"
+    },
+    "artifact": {
+      "review": {
+        "approved": true,
+        "evidence_score": 5,
+        "issues": [],
+        "language_score": 5,
+        "market_fit_score": 5,
+        "rationale": "该方案严格遵循合成简报，针对“城市通勤人群”采用非正式德语“du”建立亲近感。脚本仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用四项已知事实，未出现防漏、耐用、轻便等禁止声明。视觉描述明确基于合成矢量图，未虚构实拍动作或场景，时长控制在20秒内，符合所有事实与格式要求。"
+      },
+      "script": {
+        "claim_ids": [
+          "capacity",
+          "lid",
+          "material",
+          "reuse"
+        ],
+        "cta": "Jetzt Produktdetails ansehen.",
+        "hook": "Perfekt für deinen täglichen Weg zur Arbeit.",
+        "language": "de-DE",
+        "localization_rationale": "针对合成受众简报中的“城市通勤人群”，脚本采用非正式“du”称呼以建立亲近感。视觉描述利用提供的合成矢量图（commute, cup-hero）展示通勤场景与产品细节，避免虚构实拍动作。文案严格限定于350ml容量、不锈钢杯身、旋盖和可重复使用四个已知事实，规避了“防漏”、“耐用”、“轻便”等禁止声明，确保内容仅基于产品档案支持的信息。",
+        "shots": [
+          {
+            "asset_id": "commute",
+            "end": 5,
+            "on_screen": "350 ml für unterwegs",
+            "start": 0,
+            "visual": "合成矢量图：抽象城市通勤背景，平面杯形示意，轻推近镜头展示场景标签。",
+            "voiceover": "Dein täglicher Weg braucht den perfekten Begleiter."
+          },
+          {
+            "asset_id": "cup-hero",
+            "end": 10,
+            "on_screen": "Edelstahl & Schraubdeckel",
+            "start": 5,
+            "visual": "合成矢量图：平面杯形与旋盖特写，抽象背景，字幕叠加强调材质。",
+            "voiceover": "Edelstahl-Körper und praktischer Schraubdeckel."
+          },
+          {
+            "asset_id": "commute",
+            "end": 15,
+            "on_screen": "350 ml Fassungsvermögen",
+            "start": 10,
+            "visual": "合成矢量图：通勤场景中的杯子示意，轻推近展示容量标签。",
+            "voiceover": "Genau 350 ml Platz für deine Lieblingsgetränke."
+          },
+          {
+            "asset_id": "cup-hero",
+            "end": 20,
+            "on_screen": "Wiederverwendbar",
+            "start": 15,
+            "visual": "合成矢量图：杯子整体示意，抽象背景，字幕叠加强调可重复使用。",
+            "voiceover": "Wiederverwendbar und immer griffbereit."
+          }
+        ],
+        "task_id": "DE-1",
+        "title": "Dein 350 ml Begleiter für den Weg"
+      },
+      "status": "approved",
+      "task_hash": "5d7de94df3a2b8eaace0be955e4fce2a20eec14b78c64307b2c82fa164e19f32"
+    }
+  }
+}

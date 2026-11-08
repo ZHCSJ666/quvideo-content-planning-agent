@@ -1,0 +1,312 @@
+{
+  "task_id": "autonomy-20261108-a-transient",
+  "brief": {
+    "theme": "ROAM 350 便携杯：德国与美国市场的多语言短视频内容活动",
+    "product_id": "travel-cup",
+    "markets": {
+      "DE": 2,
+      "US": 2
+    },
+    "budget_units": 100,
+    "deadline_hours": 48.0,
+    "max_calls": 40
+  },
+  "mode": "live",
+  "status": "completed",
+  "plan": [
+    {
+      "id": "DE-1",
+      "market": "DE",
+      "angle": "随身通勤的容量与使用场景",
+      "audience": "城市通勤人群",
+      "strategy": "以350ml容量和旋盖设计为核心，展示通勤场景中杯子的便携性。使用commute和cup-hero素材，通过字幕强调容量与使用场景，避免虚构保温或防漏效果。",
+      "asset_ids": [
+        "commute",
+        "cup-hero"
+      ],
+      "tier": "standard"
+    },
+    {
+      "id": "DE-2",
+      "market": "DE",
+      "angle": "办公桌上的重复使用习惯",
+      "audience": "城市通勤人群",
+      "strategy": "聚焦不锈钢材质和可重复使用特性，展示办公场景中的杯子使用。使用desk和cup-detail素材，通过字幕仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用四项已知事实，避免任何环保、耐用或长期可靠等推断性表述。",
+      "asset_ids": [
+        "desk",
+        "cup-detail"
+      ],
+      "tier": "standard"
+    },
+    {
+      "id": "US-1",
+      "market": "US",
+      "angle": "出发前的轻装准备",
+      "audience": "周末户外与短途出行人群",
+      "strategy": "以350ml容量和不锈钢材质为卖点，展示短途出行前的准备场景。使用trail和cup-hero素材，通过字幕强调便携性和容量，避免虚构保温时长或防漏效果。",
+      "asset_ids": [
+        "trail",
+        "cup-hero"
+      ],
+      "tier": "standard"
+    },
+    {
+      "id": "US-2",
+      "market": "US",
+      "angle": "短途休息时的使用场景",
+      "audience": "周末户外与短途出行人群",
+      "strategy": "聚焦旋盖设计和可重复使用特性，展示户外休息时的杯子使用。使用road和cup-detail素材，通过字幕强调使用便利性，避免虚构耐用性或环保声明。",
+      "asset_ids": [
+        "road",
+        "cup-detail"
+      ],
+      "tier": "standard"
+    }
+  ],
+  "artifacts": {
+    "DE-1": {
+      "task_hash": "5d7de94df3a2b8eaace0be955e4fce2a20eec14b78c64307b2c82fa164e19f32",
+      "status": "approved",
+      "script": {
+        "task_id": "DE-1",
+        "language": "de-DE",
+        "title": "Dein 350 ml Begleiter für den Weg",
+        "hook": "Perfekt für deinen täglichen Weg zur Arbeit.",
+        "cta": "Jetzt Produktdetails ansehen.",
+        "claim_ids": [
+          "capacity",
+          "lid",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "针对合成受众简报中的“城市通勤人群”，脚本采用非正式“du”称呼以建立亲近感。视觉描述利用提供的合成矢量图（commute, cup-hero）展示通勤场景与产品细节，避免虚构实拍动作。文案严格限定于350ml容量、不锈钢杯身、旋盖和可重复使用四个已知事实，规避了“防漏”、“耐用”、“轻便”等禁止声明，确保内容仅基于产品档案支持的信息。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "commute",
+            "visual": "合成矢量图：抽象城市通勤背景，平面杯形示意，轻推近镜头展示场景标签。",
+            "voiceover": "Dein täglicher Weg braucht den perfekten Begleiter.",
+            "on_screen": "350 ml für unterwegs"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-hero",
+            "visual": "合成矢量图：平面杯形与旋盖特写，抽象背景，字幕叠加强调材质。",
+            "voiceover": "Edelstahl-Körper und praktischer Schraubdeckel.",
+            "on_screen": "Edelstahl & Schraubdeckel"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "commute",
+            "visual": "合成矢量图：通勤场景中的杯子示意，轻推近展示容量标签。",
+            "voiceover": "Genau 350 ml Platz für deine Lieblingsgetränke.",
+            "on_screen": "350 ml Fassungsvermögen"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "cup-hero",
+            "visual": "合成矢量图：杯子整体示意，抽象背景，字幕叠加强调可重复使用。",
+            "voiceover": "Wiederverwendbar und immer griffbereit.",
+            "on_screen": "Wiederverwendbar"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "该方案严格遵循合成简报，针对“城市通勤人群”采用非正式德语“du”建立亲近感。脚本仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用四项已知事实，未出现防漏、耐用、轻便等禁止声明。视觉描述明确基于合成矢量图，未虚构实拍动作或场景，时长控制在20秒内，符合所有事实与格式要求。"
+      }
+    },
+    "DE-2": {
+      "task_hash": "95602dc54effa465f61aa6648a3c9b1d9d55bcd2bc35ae4b54d2af0de183654f",
+      "status": "approved",
+      "script": {
+        "task_id": "DE-2",
+        "language": "de-DE",
+        "title": "Deine Tasse am Schreibtisch",
+        "hook": "Hier steht deine Tasse.",
+        "cta": "Entdecke die Details.",
+        "claim_ids": [
+          "capacity",
+          "material",
+          "lid",
+          "reuse"
+        ],
+        "localization_rationale": "针对演示设定的城市通勤人群，脚本聚焦“办公桌上的重复使用习惯”角度。使用非正式“du”以贴近目标受众。视觉描述基于提供的合成静态素材（desk, cup-detail），仅展示350ml容量、不锈钢杯身、旋盖和可重复使用这四个既定事实。严格避免任何关于耐用性、防漏或环保影响的虚构声明，修正了前版中“Begleiter”（隐含长期可靠）和“环保习惯”的违规推断，仅陈述产品档案支持的事实。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "desk",
+            "visual": "平面合成图：办公桌上的杯子示意，抽象背景，无真人。镜头轻推近。",
+            "voiceover": "Hier steht deine Tasse.",
+            "on_screen": "Deine Tasse"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-detail",
+            "visual": "平面合成图：杯子与旋盖细节特写，抽象背景。镜头轻推近。",
+            "voiceover": "350 Milliliter Inhalt und Edelstahl-Körper.",
+            "on_screen": "350 ml • Edelstahl"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-detail",
+            "visual": "平面合成图：旋盖细节特写，抽象背景。镜头轻推近。",
+            "voiceover": "Mit Schraubdeckel.",
+            "on_screen": "Schraubdeckel"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "desk",
+            "visual": "平面合成图：办公桌上的杯子示意，抽象背景。镜头轻推近。",
+            "voiceover": "Wiederverwendbar. Entdecke die Details.",
+            "on_screen": "Wiederverwendbar"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "该方案严格遵循合成简报，针对“城市通勤人群”及“办公桌上的重复使用习惯”角度，使用自然德语（非正式“du”）。脚本仅陈述350ml容量、不锈钢杯身、旋盖和可重复使用四项既定事实，未出现任何关于耐用性、防漏、环保或重量的违规推断。视觉描述明确基于合成静态素材，未虚构实拍动作，时长控制在20秒内，符合所有约束条件。"
+      }
+    },
+    "US-1": {
+      "task_hash": "0d3b2c88c3e849f5df73e21c7196c3f452cf0fa2595ae05c34c626f03894b692",
+      "status": "approved",
+      "script": {
+        "task_id": "US-1",
+        "language": "en-US",
+        "title": "Light Prep for Your Weekend Trail",
+        "hook": "Ready for a quick weekend escape?",
+        "cta": "Explore product details",
+        "claim_ids": [
+          "capacity",
+          "material",
+          "lid",
+          "reuse"
+        ],
+        "localization_rationale": "针对“周末户外与短途出行人群”的合成受众简报，脚本以“出发前的轻装准备”为创意角度，使用美式英语自然口语。视觉描述基于提供的合成矢量素材（trail, cup-hero），仅展示平面杯形、旋盖示意和抽象背景，不虚构真人或实拍场景。文案严格限定于350ml容量、不锈钢杯身、旋盖和可重复使用四个已知事实，避免任何关于防漏、耐用性或环保的虚构声明。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "trail",
+            "visual": "Synthetic vector still of a trail path with abstract background and English scene labels. No real people or live-action movement.",
+            "voiceover": "Ready for a quick weekend escape?",
+            "on_screen": "Weekend Trail Prep"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-hero",
+            "visual": "Synthetic vector still of the cup shape and screw-top lid on an abstract background. Slight digital zoom-in effect.",
+            "voiceover": "Grab your 350 ml stainless steel cup.",
+            "on_screen": "350 ml Capacity"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-hero",
+            "visual": "Synthetic vector still focusing on the screw-top lid detail. Text overlay appears.",
+            "voiceover": "It features a screw-top lid.",
+            "on_screen": "Screw-top Lid"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "trail",
+            "visual": "Synthetic vector still of the trail path again. Final text overlay with CTA.",
+            "voiceover": "Reusable and ready to go.",
+            "on_screen": "Reusable Cup"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "该方案严格遵循合成简报，针对“周末户外与短途出行人群”设定“出发前的轻装准备”角度。脚本仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用四项已知事实，未虚构防漏、耐用性或环保效益。视觉描述准确反映合成矢量素材属性，未将静态图误作实拍。文案自然流畅，时长控制在20秒内，符合所有约束。"
+      }
+    },
+    "US-2": {
+      "task_hash": "30f4007e3947b41490d0af1cbf29e7f4d39ec3df5a2dc57d0fd8d11448b9c5ab",
+      "status": "approved",
+      "script": {
+        "task_id": "US-2",
+        "language": "en-US",
+        "title": "Short Break on the Road",
+        "hook": "Ready for your short break?",
+        "cta": "Explore product details",
+        "claim_ids": [
+          "capacity",
+          "lid",
+          "material",
+          "reuse"
+        ],
+        "localization_rationale": "针对“周末户外与短途出行人群”的演示设定，脚本聚焦“短途休息时的使用场景”角度。使用美式英语自然表达，通过road和cup-detail合成素材展示旋盖设计与可重复使用特性。避免虚构耐用性、防漏或环保声明，仅陈述350ml容量、不锈钢杯身、旋盖和可重复使用等既定事实。",
+        "shots": [
+          {
+            "start": 0,
+            "end": 5,
+            "asset_id": "road",
+            "visual": "Synthetic road scene with abstract background and English scene labels; no real people or street views. Light zoom-in effect.",
+            "voiceover": "Ready for your short break on the road?",
+            "on_screen": "Short Break"
+          },
+          {
+            "start": 5,
+            "end": 10,
+            "asset_id": "cup-detail",
+            "visual": "Synthetic cup detail with screw-top lid illustration; abstract background. Crop and light push-in.",
+            "voiceover": "This reusable cup has a 350 ml capacity.",
+            "on_screen": "350 ml"
+          },
+          {
+            "start": 10,
+            "end": 15,
+            "asset_id": "cup-detail",
+            "visual": "Close-up of the screw-top lid illustration; abstract background. Subtle pan.",
+            "voiceover": "It features a screw-top lid and stainless steel body.",
+            "on_screen": "Screw-top lid"
+          },
+          {
+            "start": 15,
+            "end": 20,
+            "asset_id": "road",
+            "visual": "Synthetic road scene with cup detail overlay; abstract background. Fade to CTA.",
+            "voiceover": "Perfect for your next short trip. Explore product details.",
+            "on_screen": "Reusable"
+          }
+        ]
+      },
+      "review": {
+        "approved": true,
+        "language_score": 5,
+        "market_fit_score": 5,
+        "evidence_score": 5,
+        "issues": [],
+        "rationale": "该方案严格遵循合成简报设定，针对“周末户外与短途出行人群”演示场景。脚本仅陈述350ml容量、不锈钢杯身、旋盖及可重复使用等既定事实，未虚构防漏、耐用性或环保声明。视觉描述明确标注为合成矢量素材，未冒充实拍。时长20秒，语言自然，符合所有约束。"
+      }
+    }
+  },
+  "spent": 70,
+  "elapsed_minutes": 640,
+  "plan_version": 2,
+  "disclaimer": "Synthetic product/market/media; plan delivery only, no rendered video; model review is not human market validation."
+}

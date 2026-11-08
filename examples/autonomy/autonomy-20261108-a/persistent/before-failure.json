@@ -1,0 +1,76 @@
+{
+  "DE-1": {
+    "task": {
+      "angle": "随身通勤的容量与使用场景",
+      "asset_ids": [
+        "commute",
+        "cup-hero"
+      ],
+      "audience": "城市通勤人群",
+      "id": "DE-1",
+      "market": "DE",
+      "strategy": "以通勤场景开场，展示350ml容量和旋盖设计，强调不锈钢杯身和可重复使用特性。使用commute和cup-hero素材，通过字幕和轻推近镜头突出产品细节，避免虚构保温或防漏效果。",
+      "tier": "standard"
+    },
+    "artifact": {
+      "review": {
+        "approved": true,
+        "evidence_score": 5,
+        "issues": [],
+        "language_score": 5,
+        "market_fit_score": 5,
+        "rationale": "该方案严格遵循合成简报，针对“城市通勤人群”使用非正式德语“du”建立亲近感。脚本仅陈述350ml容量、旋盖、不锈钢材质及可重复使用四项既定事实，未出现防漏、耐用、环保等禁止声明。视觉描述明确基于合成矢量素材，未虚构实拍动作或场景。旁白总词数约35词，符合20秒时长与<55词限制，CTA清晰且无虚构折扣。"
+      },
+      "script": {
+        "claim_ids": [
+          "capacity",
+          "lid",
+          "material",
+          "reuse"
+        ],
+        "cta": "Entdecke die Details.",
+        "hook": "Perfekt für deinen Weg zur Arbeit.",
+        "language": "de-DE",
+        "localization_rationale": "针对合成受众简报中的“城市通勤人群”，脚本采用非正式“du”以建立亲近感。视觉描述使用中文以符合工具要求。内容严格限制于产品档案中的四个事实（350ml、不锈钢、旋盖、可重复使用），避免任何关于防漏、耐用性或环保的虚构声明。节奏紧凑，确保20秒内完成30-45词的德语旁白。",
+        "shots": [
+          {
+            "asset_id": "commute",
+            "end": 5,
+            "on_screen": "350 ml",
+            "start": 0,
+            "visual": "平面杯形与旋盖示意，抽象背景，轻推近镜头展示通勤场景标签。",
+            "voiceover": "Dein Weg zur Arbeit braucht Platz."
+          },
+          {
+            "asset_id": "cup-hero",
+            "end": 10,
+            "on_screen": "Schraubdeckel",
+            "start": 5,
+            "visual": "平面杯形特写，聚焦旋盖设计，字幕叠加。",
+            "voiceover": "Mit Schraubdeckel und Edelstahl."
+          },
+          {
+            "asset_id": "cup-hero",
+            "end": 15,
+            "on_screen": "Edelstahl",
+            "start": 10,
+            "visual": "平面杯形静态展示，强调不锈钢杯身质感。",
+            "voiceover": "Ein Edelstahl-Becher für dich."
+          },
+          {
+            "asset_id": "commute",
+            "end": 20,
+            "on_screen": "Wiederverwendbar",
+            "start": 15,
+            "visual": "平面杯形与抽象背景，轻推近镜头，展示重复使用概念。",
+            "voiceover": "Wiederverwendbar. Entdecke die Details."
+          }
+        ],
+        "task_id": "DE-1",
+        "title": "Dein 350 ml Begleiter"
+      },
+      "status": "approved",
+      "task_hash": "ce08cd9a2ffeb87980c46a2beb43944a5d7c98fe1958fc37607b27557a950697"
+    }
+  }
+}

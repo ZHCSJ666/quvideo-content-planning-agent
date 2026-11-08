@@ -77,6 +77,50 @@
       "additional_calls": 0,
       "additional_cost": 0,
       "task_id": "final-normal"
+    },
+    {
+      "case": "autonomous-transient",
+      "task_id": "autonomy-20261108-a-transient",
+      "status": "completed",
+      "spent": 70,
+      "calls": 21,
+      "model_calls": 31,
+      "model_usage": {
+        "input_tokens": 119799,
+        "output_tokens": 6390,
+        "total_tokens": 126189
+      },
+      "resume_count": 0,
+      "passed": true,
+      "recovery_mode": "autonomous_within_one_run",
+      "preserved_approved_tasks": [
+        "DE-1"
+      ],
+      "source_sha256": "5e9fed94f6e42970f3ce48935281c944e72f707bf0d7b5e0a49003417c976dfe",
+      "evidence": "examples/autonomy/autonomy-20261108-a/transient",
+      "failed_checks": []
+    },
+    {
+      "case": "autonomous-persistent",
+      "task_id": "autonomy-20261108-a-persistent",
+      "status": "incomplete",
+      "spent": 17,
+      "calls": 9,
+      "model_calls": 11,
+      "model_usage": {
+        "input_tokens": 40877,
+        "output_tokens": 1831,
+        "total_tokens": 42708
+      },
+      "resume_count": 0,
+      "passed": true,
+      "recovery_mode": "autonomous_within_one_run",
+      "preserved_approved_tasks": [
+        "DE-1"
+      ],
+      "source_sha256": "5e9fed94f6e42970f3ce48935281c944e72f707bf0d7b5e0a49003417c976dfe",
+      "evidence": "examples/autonomy/autonomy-20261108-a/persistent",
+      "failed_checks": []
     }
   ]
 }

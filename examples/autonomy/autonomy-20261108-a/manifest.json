@@ -1,0 +1,43 @@
+{
+  "batch": "autonomy-20261108-a",
+  "started_at": "2026-11-08T20:04:09.916859+08:00",
+  "git_commit": "7eea2a6bd76d1797974a20937f4769c94a7fd5d9",
+  "source": {
+    "sha256": "5e9fed94f6e42970f3ce48935281c944e72f707bf0d7b5e0a49003417c976dfe",
+    "files": {
+      "data/assets/commute.svg": "fd625be89623f96bf03bf113d4d17307499ab9487571b77d6c995cf9e7ce6ca9",
+      "data/assets/cup-detail.svg": "d19b13c321396ce1003b6ca3c574173edf4c03c12dd020c015125e7d5f7b24c5",
+      "data/assets/cup-hero.svg": "3b9bf0aaadd2d2e65541c07c21c1878cac526e67fac2de403f493d469ecbcabe",
+      "data/assets/desk.svg": "d326f7e07f58bdb29ffba2f7a44cf63499aa0918d9a155048a2c2a126748337e",
+      "data/assets/road.svg": "2b4640f92340ad4d7610413fc86df81b8b8b8269dcb718a1d7ae74eeea1f0070",
+      "data/assets/trail.svg": "900fbd71da1c1437c12ad46e533d89c2f497379888cbc2f6521c38c8770e013c",
+      "data/assets.json": "c1ed02c46191c39841eaeb166145cb82f14214978d74b5292a0288ccfebe30ba",
+      "data/markets.json": "79585dc28e3bae9a2b361601d62d5a317367a3ef8a4ef8fe094fa8ca33dbc148",
+      "data/product.json": "a131698f343e5a42a3d3fb23a6037a90cd0358118f2ea2c7c26896926eefc653",
+      "data/rules.json": "7bb593489b065949a4f47237cdcb541fc767331faf7a2a8ecc77306da4aa1f9a",
+      "pyproject.toml": "39a824c532d04e9e2925c3363cbae8dac9782e771e64f90c49e3a16dd1546907",
+      "requirements.lock": "788199db5e1bb8339710b4084fe13a141213628f65c08de54b6816e857217bab",
+      "scripts/run_autonomous_acceptance.py": "edbef51a73d48cb773ac50a47f63278c6ab6b339fdd3cb13831cdd717e9cb617",
+      "src/content_agent/__init__.py": "40eb022f4c1a2d933cb09dc7d867a514a15a77cffd26cf2c3bd30473f1082e81",
+      "src/content_agent/agent.py": "5e096d01045685a3b5a99c4c52c1b9607d79489cee7eb922a56388dda2b60b69",
+      "src/content_agent/cli.py": "ee6537bfe80e820f119c70ab53fa3287800fae794aafda12c4da07ed8bd41d3e",
+      "src/content_agent/domain.py": "a9388101e1f742f27f80ac22a929440b24546ad3291bc57730b620da846fedb2",
+      "src/content_agent/evaluation.py": "604be844daae652ea57157ba0cc3bb75acef2f28676575e3f6e5be1b4ad43ee8",
+      "src/content_agent/providers.py": "b2144663c4ffb2ac82964ccab5b97682a658538b1814fcc98ade14e33fa4e9f9",
+      "src/content_agent/service.py": "816826094fd695b3d7f95cc7bbca7dbe4803604730c59914e86ff255f5cf0f21",
+      "src/content_agent/storage.py": "4f8e7cdc5263773fdc6e7ad2c06d4f6df5a07fc9be535ad822de4714476d0dec",
+      "src/content_agent/tools.py": "660dd26353cb417cf53d84d106e1d83379b2caf7c31eb726f2b6a3b8bc2f50fd"
+    }
+  },
+  "model_config": {
+    "model": "vllm/Qwen/Qwen3.5-27B",
+    "temperature": 0.2,
+    "max_tokens": 6000,
+    "vllm_disable_thinking": true,
+    "sdk_retries": 0,
+    "timeout_seconds": 120.0
+  },
+  "protocol": "Fresh tasks, same input/model/source, serial execution, fault scenario hidden from planner, no resume/repair/config changes. All attempts retained; only a passing pair is published to the primary live gallery.",
+  "finished_at": "2026-11-08T20:11:56.556839+08:00",
+  "passed": true
+}

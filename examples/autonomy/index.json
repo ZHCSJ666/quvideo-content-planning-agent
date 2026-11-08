@@ -1,0 +1,9 @@
+{
+  "batches": [
+    {
+      "batch": "autonomy-20261108-a",
+      "passed": true,
+      "evaluation": "examples/autonomy/autonomy-20261108-a/evaluation.json"
+    }
+  ]
+}
