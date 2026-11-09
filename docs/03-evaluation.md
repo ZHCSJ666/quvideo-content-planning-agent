@@ -168,4 +168,4 @@ python scripts/build_autonomy_report.py
 - 素材为实际可读的合成 SVG；未验证真实视频渲染、配音时长、真实商品参数或商业投放。20 秒分镜和字数只是方案约束。
 - 本地账本与回执防重通过测试；网络超时后的实际模型计费、分布式工具 exactly-once 和真实第三方作业查询未实现。
 - Streamlit 通过 AppTest 归档展示、新建任务、失败恢复和零预算保留测试，以及 HTTP 健康检查；当前环境无用户浏览器控制工具，未声称完成截图级视觉验收。
-- GitHub URL、题号与最终远端 commit 仍需要实际提交信息；不能用本地代码替代已推送仓库。
+- 题号、目标仓库和发布状态见 [submission.json](../submission.json)；正式提交还须核对最终远端 commit。个人用时及本人审阅/操作记录见 [AI 使用说明](04-ai-usage.md)。

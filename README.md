@@ -2,6 +2,8 @@
 
 面向跨境电商的多语言营销内容规划与预算优化 Agent。重点展示**模型如何依据工具反馈完成任务、修改计划和处理失败**。
 
+对应题目 2「内容任务规划 Agent」。
+
 默认任务：为合成便携杯 ROAM 350，在 100 个模拟单位、48 个模拟小时内，交付德国和美国市场各两条短视频内容方案。真实生成脚本、20 秒分镜与方案文件；不生成成片。
 
 ## 评审先看什么
@@ -21,13 +23,14 @@
 验证环境：Python 3.12，Linux；锁定的完整环境要求 Python 3.12+。使用项目内虚拟环境，不修改系统 Python。
 
 ```bash
-cd 小影
+git clone https://github.com/ZHCSJ666/quvideo-content-planning-agent.git
+cd quvideo-content-planning-agent
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-`requirements.lock` 固定已验证的依赖版本。项目使用可编辑安装，数据从仓库 `data/` 读取，因此在项目目录运行。无模型凭据也可运行离线模式与测试。
+已有本地副本时，从该仓库根目录执行创建虚拟环境及后续命令即可。`requirements.lock` 固定已验证的依赖版本。项目使用可编辑安装，数据从仓库 `data/` 读取，因此在项目目录运行。无模型凭据也可运行离线模式与测试。
 
 ## 一分钟离线运行
 
@@ -129,4 +132,11 @@ app.py              轻量 Streamlit 界面
 
 市场资料和素材为自制演示数据；语言和创意审核使用模型，尚不能替代母语运营人员审核或真实市场测试。供应商网络超时后，真实模型是否计费无法凭本地 Trace 确认。当前只保证可控本地工具与模拟账本的防重，不宣称分布式 exactly-once。
 
-提交前如实补充本人审阅/修改记录，并确认仓库题号、GitHub URL 和最终 commit SHA。原始试题、`.env`、运行数据库和虚拟环境被 `.gitignore` 排除；公开前仍需检查暂存文件。完整提交元信息见 `submission.json`。
+个人分工、审阅确认及约 5 小时的本人估算用时见 [AI 使用说明](docs/04-ai-usage.md)。题号、目标仓库和版本核对命令见 [submission.json](submission.json)。提交题目 2、仓库 URL，以及核对一致的最终 commit SHA：
+
+```bash
+git rev-parse HEAD
+git ls-remote origin refs/heads/main
+```
+
+两条命令中的 SHA 应一致。SHA 不写入其自身的 commit，避免为填写版本编号再次改变版本。原始试题、`.env`、运行数据库和虚拟环境被 `.gitignore` 排除。

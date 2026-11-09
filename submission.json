@@ -1,9 +1,11 @@
 {
   "project_title": "面向跨境电商的多语言营销内容规划与预算优化 Agent",
   "selected_problem": "内容任务规划 Agent",
-  "problem_number": null,
+  "problem_number": 2,
   "github_url": "https://github.com/ZHCSJ666/quvideo-content-planning-agent",
-  "final_commit_sha": null,
-  "status": "local_project_prepared; repository URL confirmed; problem number, personal records and publication pending",
-  "note": "最终 SHA 在推送后以 git rev-parse HEAD 的输出提交；不要把包含自身 SHA 的元数据循环写入同一 commit。"
+  "submission_branch": "main",
+  "commit_sha_command": "git rev-parse HEAD",
+  "remote_sha_command": "git ls-remote origin refs/heads/main",
+  "status": "submission_materials_finalized",
+  "note": "最终 SHA 在推送后核对本地 HEAD 与远端 main 一致再提交；SHA 不写入其自身的 commit，以免修改文件再次改变版本编号。"
 }
